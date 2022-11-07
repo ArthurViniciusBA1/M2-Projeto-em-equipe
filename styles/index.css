@@ -1,4 +1,6 @@
 /* mobile S, M, L */
+@import url(./global.css);
+
 main {
     width: 100vw;
     height: 100vh;
