@@ -9,6 +9,6 @@ export function receberForm(elementos) {
         } else if (elemento.tagName == "SELECT" && elemento.value) {
             corpoApi[elemento.id] = elemento.value
         }
-    }) 
+    })
     return corpoApi
 }
