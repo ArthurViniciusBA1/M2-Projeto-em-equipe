@@ -35,3 +35,4 @@ export async function login(usuario) {
     } catch (err) {
         console.log(err)
     }
+}

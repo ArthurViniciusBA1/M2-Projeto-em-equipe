@@ -36,23 +36,24 @@ main {
     flex-direction: column;
     gap: 20px;
 }
-.divInputs>input, .divInputs>button {
+form>input, form>button {
     height: 40px;
     border-radius: 30px;
     border: none;
     font-size: 1rem;
 }
-.divInputs>input {
+form>input {
     padding-left: 20px;
 }
-.divInputs>button {
+form>button {
     background-color: var(--brand-100);
     color: white;
+    width: 70%;
 }
-.divInputs>button:active {
+form>button:active {
     background-color: var(--brand-200);
 }
-.divInputs>p {
+form>p {
     width: 100%;
     display: flex;
     justify-content: center;
