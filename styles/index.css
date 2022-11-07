@@ -1,27 +1,28 @@
 /* mobile S, M, L */
 @import url(./global.css);
 
-body{
+body {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
 }
 
-header{
+header {
     width: 100%;
     background: var(--brand-1);
 }
 
 main {
-    
     background-color: var(--brand-1);
 }
+
 .imagemLogo {
     padding: 4%;
     margin: 10px 0;
 }
+
 .divImagem {
-    background-image: url('../assets/img/Avatar\ animal.svg');
+    background-image: url('https://random.dog/ec3dd4d0-d666-44e8-bdcf-06b5f103b111.jpg');
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -44,35 +45,52 @@ main {
     gap: 30px;
     color: white;
 }
+
 .formLogin>h2 {
     font-size: 2rem;
     font-weight: 700;
 }
+
 .divInputs {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.divInputs>input, .divInputs>button {
+
+.divInputs>input,
+.divInputs>button {
     height: 40px;
     border-radius: 30px;
     border: none;
     font-size: 1rem;
 }
+
 .divInputs>input {
     padding-left: 20px;
 }
+
 .divInputs>button {
     background-color: var(--brand-1);
     color: white;
 }
+
 .divInputs>button:active {
     background-color: var(--brand-2);
 }
+
 .divInputs>p {
     width: 100%;
     display: flex;
     justify-content: center;
     color: var(--black);
     font-weight: 600;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+
+    height: 25px;
+    width: 100%;
+    background-color: var(--brand-1);
 }
