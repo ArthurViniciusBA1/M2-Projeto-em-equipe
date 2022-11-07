@@ -5,11 +5,19 @@ main {
     background-color: var(--brand-100);
 }
 .imagemLogo {
-    padding: 3%;
+    padding: 4%;
+    margin: 10px 0;
+}
+.divImagem {
+    background-image: url('../assets/img/Avatar\ animal.svg');
+    position: fixed;
+    height: 85vh;
+    width: 100vw;
+    overflow: hidden;
 }
 .formLogin {
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
     position: relative;
     z-index: 1;
     display: flex;
@@ -32,7 +40,22 @@ main {
     height: 40px;
     border-radius: 30px;
     border: none;
+    font-size: 1rem;
 }
 .divInputs>input {
     padding-left: 20px;
+}
+.divInputs>button {
+    background-color: var(--brand-100);
+    color: white;
+}
+.divInputs>button:active {
+    background-color: var(--brand-200);
+}
+.divInputs>p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-weight: 600;
 }

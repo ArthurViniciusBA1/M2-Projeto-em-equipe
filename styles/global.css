@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
     --brand-100: #962027;
+    --brand-200: #b94149;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
 }
