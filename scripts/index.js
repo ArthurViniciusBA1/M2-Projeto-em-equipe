@@ -3,6 +3,7 @@ import { abrirModal, modalCadastrar } from "./modal.js"
 import { login } from "./request.js"
 
 const formularioLogin = document.querySelector(".formLogin")
+const botaoCadastrar  = document.querySelector(".cadastrar")
 
 formularioLogin.addEventListener("submit", (event) =>{
     event.preventDefault()
@@ -10,4 +11,6 @@ formularioLogin.addEventListener("submit", (event) =>{
     login(corpo)
 })
 
-abrirModal(modalCadastrar())
+botaoCadastrar.addEventListener("click", () => {
+    abrirModal(modalCadastrar())
+})
