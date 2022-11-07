@@ -14,7 +14,7 @@
 .form-modal{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     gap: 20px;
     align-items: center;
     margin: 20px 0;
@@ -38,6 +38,9 @@
     width: 100%;
     max-width: 520px;
     background-color: var(--modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bg-modal h2{
@@ -48,6 +51,8 @@
 
 .bg-modal button {
     color: var(--modal);
+    min-width: 300px;
+    max-width: 343px;
 }
 
 .fechar-modal {

@@ -28,6 +28,8 @@ export const abrirModal = (children) => {
     modal.append(bgModal)
     fundoDoModal.append(modal)
     body.appendChild(fundoDoModal)
+    
+    
 }
 
 export const modalCadastrar = () => {
@@ -50,6 +52,20 @@ export const modalCadastrar = () => {
         let corpo = receberForm(formModal.elements)
         cadastroUsuario(corpo)
     })
+
+   
     return formModal
+}
+
+export const fecharModal = (request) => {
+
+    const modal = document.querySelector('.fundo-do-modal')
+
+    if(request){
+        modal.remove()
+    }else{
+        console.log('Deu algum erro!')
+    }
+
 }
 
