@@ -13,7 +13,6 @@ export async function cadastroUsuario(usuario) {
 
         let novoUsuarioJson = await novoUsuario.json()
 
-    console.log(novoUsuarioJson)        
         return novoUsuarioJson
 
     } catch (err) {
