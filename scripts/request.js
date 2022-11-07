@@ -29,7 +29,7 @@ export async function login(usuario) {
         })
 
         let loginJson = await login.json()
-        
+        console.log(loginJson)
         return loginJson
 
     } catch (err) {
