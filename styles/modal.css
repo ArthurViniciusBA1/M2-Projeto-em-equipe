@@ -14,17 +14,16 @@
 .form-modal{
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 20px;
     align-items: center;
-    margin-top: 20px;
-    width: 100%;
+    margin: 20px 0;
 }
 
 .modal{
-    background-color: var(--brand-100);
+    background-color: var(--brand-1);
     width: 100%;
     max-width: 520px;
-    height: 380px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,14 +37,17 @@
 .bg-modal{
     width: 100%;
     max-width: 520px;
-    height: 380px;
     background-color: var(--modal);
 }
 
 .bg-modal h2{
     font-size: 32px;
-    color: var(--brand-100);
+    color: var(--brand-1);
     font-weight: 700;
+}
+
+.bg-modal button {
+    color: var(--modal);
 }
 
 .fechar-modal {

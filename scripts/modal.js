@@ -42,8 +42,7 @@ export const modalCadastrar = () => {
             <input type="password" name="senha" id="password" placeholder="Senha" class="input-padrao" required>
             <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar"
             class="input-padrao" required>
-        <button type="submit" class="botao-padrao">Cadastrar</button>
-
+        <button type="submit" class="buttonBrand1">Cadastrar</button>
     `)
 
     formModal.addEventListener("submit", (event) => {
