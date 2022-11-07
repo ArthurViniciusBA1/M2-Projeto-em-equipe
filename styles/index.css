@@ -4,7 +4,7 @@
 main {
     width: 100vw;
     height: 100vh;
-    background-color: var(--brand-100);
+    background-color: var(--brand-1);
 }
 .imagemLogo {
     padding: 4%;
@@ -48,16 +48,16 @@ main {
     padding-left: 20px;
 }
 .divInputs>button {
-    background-color: var(--brand-100);
+    background-color: var(--brand-1);
     color: white;
 }
 .divInputs>button:active {
-    background-color: var(--brand-200);
+    background-color: var(--brand-2);
 }
 .divInputs>p {
     width: 100%;
     display: flex;
     justify-content: center;
-    color: black;
+    color: var(--black);
     font-weight: 600;
 }
