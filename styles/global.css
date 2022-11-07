@@ -10,6 +10,11 @@
     --black: #000000;
     --white-1: #D8D8D7;
     --white-2: #FFF8E7;
+
+    --font-1: 2rem;
+    --font-2: 1.25rem;
+    --font-3: 1rem;
+    --font-4: 0.875rem;
 }
 
 body {
