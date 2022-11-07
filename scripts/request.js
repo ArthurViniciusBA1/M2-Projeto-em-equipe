@@ -1,3 +1,5 @@
+import { fecharModal } from "./modal.js"
+
 let urlBase = "https://m2-api-adot-pet.herokuapp.com"
 let headers = {
     "Content-Type": "application/json"
@@ -12,6 +14,8 @@ export async function cadastroUsuario(usuario) {
         })
 
         let novoUsuarioJson = await novoUsuario.json()
+
+        fecharModal(novoUsuario.ok)
 
         return novoUsuarioJson
 
