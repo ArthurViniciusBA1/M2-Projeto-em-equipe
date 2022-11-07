@@ -1,0 +1,21 @@
+.button-brand-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--brand-1);
+    border-radius: 16px;
+
+    font-weight: 600;
+    font-size: 14px;
+
+    color: var(--white);
+
+    border: var(--brand-1) 1px solid;
+}
+
+.button-brand-1:hover{
+    background-color: var(--white);
+
+    color: var(--brand-1);
+}
