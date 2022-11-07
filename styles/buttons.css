@@ -9,13 +9,11 @@
     font-weight: 600;
     font-size: 1rem;
 
-    color: var(--white);
+    color: var(--white-1);
 
     border: var(--brand-1) 1px solid;
 }
 
 .buttonBrand1:hover{
-    background-color: var(--white);
-
-    color: var(--brand-1);
+    background-color: transparent;
 }
