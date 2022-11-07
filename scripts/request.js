@@ -19,3 +19,20 @@ export async function cadastroUsuario(usuario) {
         console.log(err)
     }
 }
+
+export async function login(usuario) {
+    try {
+        let login = await fetch(`${urlBase}/session/login`, {
+                method: "POST",
+                headers: headers, 
+                body: JSON.stringify(usuario)
+        })
+
+        let loginJson = await login.json()
+        
+        return loginJson
+
+    } catch (err) {
+        console.log(err)
+    }
+}
