@@ -1,4 +1,4 @@
-.button-brand-1 {
+.buttonBrand1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
     border: var(--brand-1) 1px solid;
 }
 
-.button-brand-1:hover{
+.buttonBrand1:hover{
     background-color: var(--white);
 
     color: var(--brand-1);
