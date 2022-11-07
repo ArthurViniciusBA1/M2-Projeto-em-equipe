@@ -29,6 +29,7 @@ export async function login(usuario) {
         })
 
         let loginJson = await login.json()
+        localStorage.setItem("token", JSON.stringify(loginJson.token))
         
         return loginJson
 
