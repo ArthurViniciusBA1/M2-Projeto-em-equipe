@@ -58,14 +58,14 @@ form>button:active {
     background-color: var(--brand-200);
 }
 .divInputs>p {
-    width: 100%;
+    width: 73%;
     display: flex;
     justify-content: center;
     color: white;
     font-weight: 600;
 }
 .divInputs>button {
-    background-color: var(--brand-100);
+    background-color: var(--brand-1);
     color: white;
     width: 70%;
     height: 40px;
