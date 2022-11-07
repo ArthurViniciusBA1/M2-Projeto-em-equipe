@@ -37,10 +37,11 @@ export const modalCadastrar = () => {
             <input type="text" name="nome" id="name" placeholder="Nome" class="input-padrao">
             <input type="email" name="email" id="email" placeholder="E-mail" class="input-padrao">
             <input type="password" name="senha" id="password" placeholder="Senha" class="input-padrao">
-            <input type="avatar" name="avatar" id="avatar-url" placeholder="Avatar (Opcional)"
+            <input type="avatar" name="avatar" id="avatar-url" placeholder="Avatar"
             class="input-padrao">
         <button type="submit" class="botao-padrao">Cadastrar</button>
 
     `)
     return formModal
 }
+

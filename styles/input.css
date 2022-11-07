@@ -1,0 +1,6 @@
+.input-padrao{
+    width: 280px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--bg-modal);
+}
