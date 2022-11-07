@@ -3,11 +3,17 @@
 
 body{
     overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    width: 100%;
+    background: var(--brand-1);
 }
 
 main {
-    width: 100vw;
-    height: 100vh;
+    
     background-color: var(--brand-1);
 }
 .imagemLogo {
@@ -16,11 +22,16 @@ main {
 }
 .divImagem {
     background-image: url('../assets/img/Avatar\ animal.svg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
     position: fixed;
     height: 100%;
     width: 100%;
     overflow: hidden;
 }
+
 .formLogin {
     width: 100vw;
     height: 90vh;
