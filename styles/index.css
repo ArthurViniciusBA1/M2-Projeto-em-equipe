@@ -17,12 +17,12 @@ main {
 }
 .formLogin {
     width: 100vw;
-    height: 90vh;
+    height: 48vh;
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 30px;
     color: white;
@@ -35,6 +35,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
+    align-items: center;
 }
 form>input, form>button {
     height: 40px;
@@ -53,10 +55,19 @@ form>button {
 form>button:active {
     background-color: var(--brand-200);
 }
-form>p {
+.divInputs>p {
     width: 100%;
     display: flex;
     justify-content: center;
-    color: black;
+    color: white;
     font-weight: 600;
+}
+.divInputs>button {
+    background-color: var(--brand-100);
+    color: white;
+    width: 70%;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
 }
