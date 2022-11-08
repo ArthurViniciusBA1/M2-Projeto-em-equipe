@@ -124,14 +124,13 @@ export async function meusPetParaAdocao(token) {
       },
     })
 
+        let adotados = await adotar.json()
 
-    let response = await adotar.json()
+        return adotados
 
-    return response
-    
-  } catch (err) {
-    console.log(err)
-  }
+    } catch (err) {
+        console.log(err)
+    }
 }
 
 export async function atualizarPerfil(body) {
@@ -194,6 +193,19 @@ export async function cadastrarPet(body) {
     await cadastraPet.json()
 
     window.location.reload()
+    try {
+        let token = recebeLocalStorage()
+        let cadastraPet = await fetch('https://m2-api-adot-pet.herokuapp.com/pets', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify(body)
+        })
+        await cadastraPet.json()
+
+        window.location.reload()
 
   } catch (err) {
     console.log(err)
