@@ -10,6 +10,20 @@ header {
     margin-bottom: 2.5vh;
     display: flex;
     justify-content: space-around;
+    gap: 30vw;
+}
+
+.noShow {
+    display: none;
+}
+
+nav {
+    position: absolute;
+    top: 6vh;
+    gap: 10vw;
+    width: 100%;
+    justify-content: center;
+    display: flex;
 }
 
 main {
