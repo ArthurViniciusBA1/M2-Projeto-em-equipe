@@ -1,18 +1,81 @@
 @import url(../../styles/global.css);
 
-header {
+body {
     background-color: var(--white-2);
+}
+
+header {
     border-bottom: 1px solid var(--bg-modal);
+    margin-bottom: 2.5vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
 }
 
 .listaPets {
-    width: 90%;
+    display: flex;
+    gap: 8vw;
+    overflow-x: scroll;
+    width: 90vw;
+}
+
+.cardPet {
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    gap:2vh;
+    background-color: var(--modal);
+}
+
+.fotoPet {
+    width: 100%;
+}
+
+.fotoPet img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.infoPet {
+    margin-left: 3vw;
+}
+
+.nomePet {
+    color: var(--brand-1);
+    font-weight: 700;
+    font-size: var(--font-5);
+}
+
+.especiePet {
+    color: var(--grey-1);
+    font-weight: 600;
+    font-size: var(--font-6);
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 4vh;
+    background-color: var(--brand-opaca);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: var(--font-7);
+    color: var(--brand-1);
 }
 
 
 @media (min-width: 800px) {
     
-    footer p {
-        width: fit-content;
-    }
+    
 }
