@@ -1,4 +1,5 @@
 import { receberForm } from "./inputs.js"
+import { recebeLocalStorage } from "./localStorage.js";
 import { cadastroUsuario, atualizarPerfil, cadastrarPet } from "./request.js"
 
 const body = document.querySelector("body");
@@ -99,7 +100,6 @@ export const modalAtualizarPet = () => {
 
   return formModal;
 };
-
 export const modalCadastrarPet = () => {
   let formModal = document.createElement("form");
   formModal.classList.add("form-modal");
