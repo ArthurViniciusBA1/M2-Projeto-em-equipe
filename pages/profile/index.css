@@ -1,6 +1,106 @@
 @import url(../../styles/global.css);
 
+body{
+    width: 100vw;
+}
+
 header{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 85px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header>img{
+    height: 30px;
+}
+
+header>div{
+    display: flex;
+    gap: 24px;
+}
+
+main{
+    width: 100vw;
+}
+
+.cabecalho{
+    background-color: var(--brand-1);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    height: 300px;
     width: 100%;
+
+    position: relative;
+}
+
+.cabecalho>div{
+    color: purple;  
+
+    height: 40%;
+    width: 100%;
+}
+
+.cabecalho>img{
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    bottom: 80px;
+    border: 2px solid var(--white-1);
+    border-radius: 50%;
+}
+
+.listaDePets{
+    width: 100%;
+    max-width: 1024px;
+    height: max-content;
+    display: flex;
+    gap: 30px;
+    flex-direction:column;
+    background-color: gray;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cardPet2{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 340px;
+    background-color: var(--white-1);
+    gap: 10px;
+    border-radius: 4px;
+}
+
+.caixaImagem{
+    width: 100%;
+    height: 180px;
+    border-radius: 4px 4px 0 0;
+}
+
+.corpoCard{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.bgImg{
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/img/animalTest.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
