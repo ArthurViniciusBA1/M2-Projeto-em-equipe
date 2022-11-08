@@ -34,10 +34,11 @@ main {
 .listaPets {
     display: flex;
     gap: 8vw;
-    height: 70vh;
     align-items: center;
-    overflow-x: scroll;
     padding: 0 3vw;
+    overflow-y: scroll;
+    height: 87vh;
+    flex-direction: column;
 }
 
 .cardPet {
@@ -46,7 +47,6 @@ main {
     flex-direction: column;
     min-width: 62vw;
     max-width: 65vw;
-    gap:2vh;
     background-color: var(--white-2);
     box-shadow: 0px 0px 18px -5px var(--brand-1);
 }
@@ -63,7 +63,10 @@ main {
 }
 
 .infoPet {
-    margin-left: 3vw;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .nomePet {
