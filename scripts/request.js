@@ -90,8 +90,6 @@ export async function meusPets(token) {
     } catch (err) {
         console.log(err)
     }
-<<<<<<< HEAD
-=======
 }
 
 export async function adotaPet(token, body) {
@@ -112,5 +110,99 @@ export async function adotaPet(token, body) {
     } catch (err) {
         console.log(err)
     }
->>>>>>> b3d8a63ad53eaafb148fe6b935300346aac08d1b
+}
+
+export async function atualizarPerfil(token, body) {
+    try {
+        let atualiza = await fetch('https://m2-api-adot-pet.herokuapp.com/users/profile', {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${JSON.parse(token)}`
+            },
+            body: JSON.stringify(body)
+        })
+
+        await atualiza.json()
+
+        window.location.reload()
+    } catch(err) {
+        console.log(err)
+    }
+}
+
+export async function deletarPerfil(token) {
+    try {
+        let deleta = await fetch('https://m2-api-adot-pet.herokuapp.com/users/profile', {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${JSON.parse(token)}`
+            }
+        })
+
+        await deleta.json()
+
+        window.location.replace('../index.html')
+
+    } catch(err) {
+        console.log(err)
+    }
+}
+
+export async function cadastrarPet(token, body) {
+    try {
+        let cadastraPet = await fetch('https://m2-api-adot-pet.herokuapp.com/users/profile', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${JSON.parse(token)}`
+            },
+            body: JSON.stringify(body)
+        })
+
+        await cadastraPet.json()
+
+        window.location.reload()
+
+    } catch(err) {
+        console.log(err)
+    }
+}
+
+export async function atualizarPet(token, body, idPet) {
+    try {
+        let atualizaPet = await fetch(`https://m2-api-adot-pet.herokuapp.com/users/profhttps://m2-api-adot-pet.herokuapp.com/pets/${idPet}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${JSON.parse(token)}`
+            },
+            body: JSON.stringify(body)
+        })
+
+        await atualizaPet.json()
+
+        window.location.reload()
+
+    } catch(err) {
+        console.log(err)
+    }
+}
+
+export async function deletarPet(token, idPet) {
+    try {
+        let deletaPet = await fetch(`https://m2-api-adot-pet.herokuapp.com/users/profhttps://m2-api-adot-pet.herokuapp.com/pets/${idPet}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${JSON.parse(token)}`
+            },
+        })
+
+        await deletaPet.json()
+
+        window.location.reload()
+
+    } catch(err) {
+        console.log(err)
+    }
 }
