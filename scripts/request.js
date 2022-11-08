@@ -123,7 +123,9 @@ export async function meusPetParaAdocao(token) {
                 },
         })
 
-        await adotar.json()
+        let adotados = await adotar.json()
+
+        return adotados
 
     } catch (err) {
         console.log(err)
@@ -187,7 +189,7 @@ export async function cadastrarPet(body) {
             body: JSON.stringify(body)
         })
         await cadastraPet.json()
-        
+
         window.location.reload()
 
     } catch(err) {
