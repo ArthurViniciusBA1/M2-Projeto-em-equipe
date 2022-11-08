@@ -6,11 +6,11 @@ const imagemPerfil = document.querySelector(".cabecalho img")
 
 console.log(imagemPerfil)
 
-let perfil = await meuPerfil(token)
-let listaMeusPets = await meusPets(token)
 
-
-function criarPerfil() {
+async function criarPerfil() {
+    
+    let perfil = await meuPerfil(token)
+    let listaMeusPets = await meusPets(token)
     dadosPessoais.insertAdjacentHTML("afterbegin", `
                     <h2><span>Nome:</span> ${perfil.name}</h2>
                     <h2><span>E-mail:</span> ${perfil.email}</h2>
