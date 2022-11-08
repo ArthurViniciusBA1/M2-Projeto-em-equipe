@@ -1,14 +1,5 @@
 @import url(../../styles/global.css);
 
-<<<<<<< HEAD
-header {
-    background-color: var(--white-2);
-    border-bottom: 1px solid var(--bg-modal);
-}
-
-.listaPets {
-    width: 90%;
-=======
 body {
     background-color: var(--white-2);
 }
@@ -47,6 +38,7 @@ main {
     flex-direction: column;
     gap: 8vw;
     align-items: center;
+    width: 90%;
     padding: 1vh 3vw;
     overflow-y: scroll;
     height: 88vh;
@@ -90,6 +82,7 @@ main {
     height: 4vh;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-transform: capitalize;
 }
 
 .especiePet {
@@ -112,7 +105,6 @@ footer {
 footer p {
     font-size: var(--font-7);
     color: var(--brand-1);
->>>>>>> b3d8a63ad53eaafb148fe6b935300346aac08d1b
 }
 
 
@@ -146,7 +138,7 @@ footer p {
         flex-wrap: wrap;
         gap: 3vw;
         justify-content: center;
-        overflow-x: scroll;
+        overflow-y: scroll;
         height: 85vh;
         width: 75%;
         margin: 0 auto;
@@ -157,7 +149,7 @@ footer p {
         display: flex;
         flex-direction: column;
         height: 50vh;
-        min-width: 18vw;
+        min-width: 20vw;
         max-width: 20vw;
         background-color: var(--white-2);
         box-shadow: 0px 0px 18px -5px var(--brand-1);
