@@ -13,10 +13,31 @@ async function criarPerfil() {
     `
     <h2><span>Nome:</span> ${perfil.name}</h2>
     <h2><span>E-mail:</span> ${perfil.email}</h2>
-    <h2><span>Você adotou:</span> ${listaMeusPets.length} pets</h2>
     `
-  );
-  imagemPerfil.src = perfil.avatar_url;
+    );
+    if (listaMeusPets.length == 0) {
+        dadosPessoais.insertAdjacentHTML(
+            "beforeend",
+            `
+            <h2>Você ainda não adotou nenhum pet</h2>
+            `
+            )
+    } else if (listaMeusPets.length == 1) {
+        dadosPessoais.insertAdjacentHTML(
+            "beforeend",
+            `
+            <h2><span>Você adotou:</span> ${listaMeusPets.length} pet</h2>
+            `
+            )
+    } else {
+        dadosPessoais.insertAdjacentHTML(
+            "beforeend",
+            `
+            <h2><span>Você adotou:</span> ${listaMeusPets.length} pets</h2>
+            `
+            )
+    }
+    imagemPerfil.src = perfil.avatar_url;
 }
 
 function botaoHomeEvent() {
@@ -41,7 +62,6 @@ async function atualizarPerfilEvent() {
 
   const token = JSON.parse(localStorage.getItem("token"));
   const perfilInfo = await meuPerfil(token);
-  console.log(perfilInfo);
 
   botaoAttPerfil.addEventListener("click", () =>
     abrirModal(modalAtualizarPerfil(perfilInfo))
