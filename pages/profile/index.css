@@ -1,0 +1,60 @@
+@import url(../../styles/global.css);
+
+body{
+    width: 100vw;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 85px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+header>img{
+    height: 30px;
+}
+
+header>div{
+    display: flex;
+    gap: 24px;
+}
+
+main{
+    width: 100vw;
+}
+
+.cabecalho{
+    background-color: var(--brand-1);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    height: 300px;
+    width: 100%;
+
+    position: relative;
+}
+
+.cabecalho>div{
+    color: purple;  
+
+    height: 40%;
+    width: 100%;
+}
+
+.cabecalho>img{
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    bottom: 80px;
+    border: 2px solid var(--white-1);
+    border-radius: 50%;
+}
