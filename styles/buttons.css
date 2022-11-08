@@ -74,4 +74,8 @@
         max-width: 50%;
         padding: 0.8vh 2vw;
     }
+
+    .buttonDropdown {
+        display: none;
+    }
 }
