@@ -1,14 +1,5 @@
 @import url(../../styles/global.css);
 
-<<<<<<< HEAD
-header {
-    background-color: var(--white-2);
-    border-bottom: 1px solid var(--bg-modal);
-}
-
-.listaPets {
-    width: 90%;
-=======
 body {
     background-color: var(--white-2);
 }
@@ -111,18 +102,10 @@ footer {
 footer p {
     font-size: var(--font-7);
     color: var(--brand-1);
->>>>>>> b3d8a63ad53eaafb148fe6b935300346aac08d1b
 }
 
 
 @media (min-width: 800px) {
     
-<<<<<<< HEAD
-    footer p {
-        width: fit-content;
-    }
-}
-=======
     
 }
->>>>>>> b3d8a63ad53eaafb148fe6b935300346aac08d1b

@@ -90,8 +90,6 @@ export async function meusPets(token) {
     } catch (err) {
         console.log(err)
     }
-<<<<<<< HEAD
-=======
 }
 
 export async function adotaPet(token, body) {
@@ -112,5 +110,4 @@ export async function adotaPet(token, body) {
     } catch (err) {
         console.log(err)
     }
->>>>>>> b3d8a63ad53eaafb148fe6b935300346aac08d1b
 }
