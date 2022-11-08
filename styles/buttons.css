@@ -1,24 +1,37 @@
-.buttonBrand1 {
+button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--brand-1);
-    border-radius: 30px;
+    border: none;
+    outline: none;
     font-weight: 600;
     font-size: 1rem;
-    color: var(--white-2);
-    border: var(--brand-1) 1px solid;
+    border-radius: 30px;
+    padding: 4px 16px;
+    cursor: pointer;
 }
 
-.buttonBrand1:hover{
+.buttonBrand1 {
+    background-color: var(--brand-1);
+    color: var(--white-2);
+    border: var(--brand-1) 2px solid;
+}
+
+.buttonBrand1:hover {
     background-color: var(--white-2);
     color: var(--brand-1);
 }
 
 .buttonBrand2 {
     background-color: var(--white-2);
-    border-radius: 30px;
-    color: var(--brand-1);
+    border: 2px solid var(--brand-3);
+    color: var(--brand-3);
+}
+
+.buttonBrand2:hover {
+    background-color: var(--brand-2);
+    border-color: var(--brand-2);
+    color: var(--white-1);
 }
 
 .buttonDropdown {
@@ -41,7 +54,6 @@
     color: var(--brand-1);
     border: var(--brand-1) 1px solid;
     text-align: center;
-    cursor: pointer;
     max-width: 70%;
     align-self: center;
     padding: 0.8vh 2vw;
@@ -50,18 +62,18 @@
 
 .meAdota {
     background-color: var(--brand-3);
-    border: 1px solid  var(--brand-3);
+    border: 1px solid var(--brand-3);
     color: var(--white-2);
 }
 
 .adotado {
     background-color: var(--alert-success);
-    border: 1px solid  var(--alert-success);
+    border: 1px solid var(--alert-success);
     color: var(--white-2);
 }
 
 .indisponivel {
-    border: 1px solid  var(--white-1);
+    border: 1px solid var(--white-1);
 }
 
 @media (min-width: 800px) {
