@@ -9,11 +9,30 @@
     font-weight: 600;
     font-size: 1rem;
 
-    color: var(--white-1);
+    color: var(--white-2);
 
     border: var(--brand-1) 1px solid;
 }
 
 .buttonBrand1:hover{
-    background-color: transparent;
+    background-color: var(--white-2);
+
+    color: var(--brand-1);
+}
+
+.botaoAdocao {
+    border-radius: 30px;
+}
+.meAdota{
+    background-color: var(--brand-3);
+    border: 1px solid  var(--brand-3);
+    color: var(--white-2);
+}
+.adotado {
+    background-color: var(--alert-success);
+    border: 1px solid  var(--alert-success);
+    color: var(--white-2);
+}
+.indisponivel {
+    border: 1px solid  var(--white-1);
 }

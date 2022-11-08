@@ -41,3 +41,71 @@ export async function login(usuario) {
         console.log(err)
     }
 }
+
+export async function meuPerfil(token) {
+    try {
+        let infoPessoal = await fetch(`${urlBase}/users/profile`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+
+        let infoJson = await infoPessoal.json()
+
+        return infoJson
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+export async function todosPets(token) {
+    try {
+        let pets = await fetch(`${urlBase}/pets`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+
+        let petsJson = await pets.json()
+
+        return petsJson
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+export async function meusPets(token) {
+    try {
+        let pets = await fetch(`${urlBase}/pets/my_pets`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+
+        let petsJson = await pets.json()
+
+        return petsJson
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+export async function adotaPet(token, body) {
+    try {
+        let adotar = await fetch('https://m2-api-adot-pet.herokuapp.com/adoptions', {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json',
+                    'Authorization': `Bearer ${JSON.parse(token)}`
+                },
+                body: JSON.stringify(body)
+        })
+
+        await adotar.json()
+
+        window.location.reload()
+
+    } catch (err) {
+        console.log(err)
+    }
+}
