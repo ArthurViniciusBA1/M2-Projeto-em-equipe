@@ -84,7 +84,7 @@ export async function meusPets(token) {
     });
 
     let petsJson = await pets.json();
-
+   
     return petsJson;
   } catch (err) {
     console.log(err);
@@ -114,20 +114,24 @@ export async function adotaPet(token, body) {
 }
 
 export async function meusPetParaAdocao(token) {
-    try {
-        let adotar = await fetch('https://m2-api-adot-pet.herokuapp.com/adoptions/myAdoptions', {
-                method: "GET",
-                headers: {
-                    'Content-type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                },
-        })
+  try {
+    
+    let adotar = await fetch('https://m2-api-adot-pet.herokuapp.com/adoptions/myAdoptions', {
+      method: "GET",
+      headers: {
+        'Content-type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+    })
 
-        await adotar.json()
 
-    } catch (err) {
-        console.log(err)
-    }
+    let response = await adotar.json()
+
+    return response
+    
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 export async function atualizarPerfil(body) {
@@ -176,23 +180,24 @@ export async function deletarPerfil(token) {
 }
 
 export async function cadastrarPet(body) {
-    try {
-        let token = recebeLocalStorage()
-        let cadastraPet = await fetch('https://m2-api-adot-pet.herokuapp.com/pets', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            },
-            body: JSON.stringify(body)
-        })
-        await cadastraPet.json()
-        
-        window.location.reload()
+ 
+  try {
+    let token = recebeLocalStorage()
+    let cadastraPet = await fetch('https://m2-api-adot-pet.herokuapp.com/pets', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify(body)
+    })
+    await cadastraPet.json()
 
-    } catch(err) {
-        console.log(err)
-    }
+    window.location.reload()
+
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 export async function atualizarPet(token, body, idPet) {
