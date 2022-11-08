@@ -1,5 +1,5 @@
 import { receberForm } from "./inputs.js"
-import { cadastroUsuario, atualizarPerfil } from "./request.js"
+import { cadastroUsuario, atualizarPerfil, cadastrarPet } from "./request.js"
 
 const body = document.querySelector('body')
 
@@ -91,10 +91,18 @@ export const modalCadastrarPet = () => {
     <h2>Cadastrar pet</h2>
             <input type="text" name="nome" id="name" placeholder="Nome" class="input-padrao" required>
             <input type="text" name="bread" id="bread" placeholder="Raça" class="input-padrao" required>
+            <input type="text" name="species" id="species" placeholder="Espécie" class="input-padrao" required>
             <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar"
             class="input-padrao" required>
         <button type="submit" class="buttonBrand1">Cadastrar</button>
     `)
+
+    formModal.addEventListener("submit", async (event) => {
+        event.preventDefault()
+        let corpo = receberForm(formModal.elements)
+        console.log(corpo)
+        await cadastrarPet(corpo)
+    })
 
     return formModal
 }
@@ -115,7 +123,6 @@ export const modalAtualizarPerfil = ({name, avatar_url}) => {
     formModal.addEventListener("submit", async (event) => {
         event.preventDefault()
         let corpo = receberForm(formModal.elements)
-        console.log(corpo)
         await atualizarPerfil(corpo)
     })
    

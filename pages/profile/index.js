@@ -1,4 +1,4 @@
-import { abrirModal, modalAtualizarPerfil } from "../../scripts/modal.js";
+import { abrirModal, modalAtualizarPerfil, modalCadastrarPet } from "../../scripts/modal.js";
 import { meuPerfil, meusPets } from "../../scripts/request.js";
 
 const token = JSON.parse(localStorage.getItem("token"));
@@ -68,7 +68,17 @@ async function atualizarPerfilEvent() {
   );
 }
 
+function adotarPet() {
+    const novoPet = document.querySelector("#cadastrarNovoPet")
+
+    novoPet.addEventListener("click", () => {
+        abrirModal(modalCadastrarPet())
+    })
+
+}
+
 botaoHomeEvent();
 botaoLogoutEvent();
 atualizarPerfilEvent();
+adotarPet()
 criarPerfil();
