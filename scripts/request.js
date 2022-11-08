@@ -112,6 +112,23 @@ export async function adotaPet(token, body) {
     }
 }
 
+export async function meusPetParaAdocao(token) {
+    try {
+        let adotar = await fetch('https://m2-api-adot-pet.herokuapp.com/adoptions/myAdoptions', {
+                method: "GET",
+                headers: {
+                    'Content-type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+        })
+
+        await adotar.json()
+
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 export async function atualizarPerfil(token, body) {
     try {
         let atualiza = await fetch('https://m2-api-adot-pet.herokuapp.com/users/profile', {

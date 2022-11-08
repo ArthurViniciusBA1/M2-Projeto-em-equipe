@@ -1,5 +1,5 @@
 import { receberForm } from "./inputs.js"
-import { cadastroUsuario } from "./request.js"
+import { atualizarPet, cadastroUsuario } from "./request.js"
 
 const body = document.querySelector('body')
 
@@ -28,8 +28,8 @@ export const abrirModal = (children) => {
     modal.append(bgModal)
     fundoDoModal.append(modal)
     body.appendChild(fundoDoModal)
-    
-    
+
+
 }
 
 export const modalCadastrar = () => {
@@ -53,7 +53,7 @@ export const modalCadastrar = () => {
         cadastroUsuario(corpo)
     })
 
-   
+
     return formModal
 }
 
@@ -61,24 +61,33 @@ export const fecharModal = (request) => {
 
     const modal = document.querySelector('.fundo-do-modal')
 
-    if(request){
+    if (request) {
         modal.remove()
-    }else{
+    } else {
         console.log('Deu algum erro!')
     }
 
 }
 
-export const modalAtualizarPet = () => {
+export const modalAtualizarPet = ({name, bread, species, avatar_url}) => {
     let formModal = document.createElement('form')
     formModal.classList.add('form-modal')
 
     formModal.insertAdjacentHTML('afterbegin', `
     <h2>Atualizar pet</h2>
-    <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar" class="input-padrao"
-    required>
+    <input type="avatar" value=${name} name="nome" id="name" placeholder="Nome" class="input-padrao" required>
+    <input type="text" value=${bread} name="bread" id="bread" placeholder="Raça" class="input-padrao" required>
+    <input type="text" value=${species} name="especie" id="species" placeholder="Espécie" class="input-padrao" required>
+    <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar" class="input-padrao" required>
     <button type="submit" class="buttonBrand1">Atualizar</button>
     `)
+
+
+    formModal.addEventListener("submit", (event) => {
+        event.preventDefault()
+        let corpo = receberForm(formModal.elements)
+        atualizarPet(corpo)
+    })
 
     return formModal
 }
@@ -113,7 +122,7 @@ export const modalAtualizarPerfil = () => {
         <button type="submit" class="buttonBrand1">Cadastrar</button>
     `)
 
-   
+
     return formModal
 }
 
@@ -128,7 +137,7 @@ export const modalDeletarPerfil = () => {
         <button type="submit" id="btn-deletar" class="buttonBrand1 buttonModal">Quero deletar minha conta</button>
     `)
 
-   
+
     return formModal
 }
 

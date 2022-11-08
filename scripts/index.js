@@ -14,3 +14,4 @@ formularioLogin.addEventListener("submit", (event) =>{
 botaoCadastrar.addEventListener("click", () => {
     abrirModal(modalCadastrar())
 })
+
