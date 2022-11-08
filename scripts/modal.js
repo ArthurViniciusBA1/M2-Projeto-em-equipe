@@ -28,8 +28,8 @@ export const abrirModal = (children) => {
     modal.append(bgModal)
     fundoDoModal.append(modal)
     body.appendChild(fundoDoModal)
-    
-    
+
+
 }
 
 export const modalCadastrar = () => {
@@ -53,7 +53,7 @@ export const modalCadastrar = () => {
         cadastroUsuario(corpo)
     })
 
-   
+
     return formModal
 }
 
@@ -61,11 +61,76 @@ export const fecharModal = (request) => {
 
     const modal = document.querySelector('.fundo-do-modal')
 
-    if(request){
+    if (request) {
         modal.remove()
-    }else{
+    } else {
         console.log('Deu algum erro!')
     }
 
 }
 
+export const modalAtualizarPet = () => {
+    let formModal = document.createElement('form')
+    formModal.classList.add('form-modal')
+
+    formModal.insertAdjacentHTML('afterbegin', `
+    <h2>Atualizar pet</h2>
+    <input type="text" name="nome" id="name" placeholder="Nome" class="input-padrao" required>
+        <input type="text" name="bread" id="bread" placeholder="Raça" class="input-padrao" required>
+        <input type="text" name="bread" id="species" placeholder="Espécie" class="input-padrao" required>
+        <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar"
+        class="input-padrao" required>
+    <button type="submit" class="buttonModal buttonBrand1">Atualizar</button>
+    `)
+
+    return formModal
+}
+
+export const modalCadastrarPet = () => {
+    let formModal = document.createElement('form')
+    formModal.classList.add('form-modal')
+
+    formModal.insertAdjacentHTML('afterbegin', `
+    <h2>Cadastrar pet</h2>
+            <input type="text" name="nome" id="name" placeholder="Nome" class="input-padrao" required>
+            <input type="text" name="bread" id="bread" placeholder="Raça" class="input-padrao" required>
+            <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar"
+            class="input-padrao" required>
+        <button type="submit" class="buttonBrand1">Cadastrar</button>
+    `)
+
+    return formModal
+}
+
+export const modalAtualizarPerfil = () => {
+
+    let formModal = document.createElement('form')
+    formModal.classList.add('form-modal')
+
+    formModal.insertAdjacentHTML("afterbegin", `
+        <h2>Atualizar perfil</h2>
+            <input type="text" name="nome" id="name" placeholder="Nome" class="input-padrao" required>
+            <input type="email" name="email" id="email" placeholder="E-mail" class="input-padrao" required>
+            <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar"
+            class="input-padrao" required>
+        <button type="submit" class="buttonBrand1">Cadastrar</button>
+    `)
+
+
+    return formModal
+}
+
+export const modalDeletarPerfil = () => {
+
+    let formModal = document.createElement('form')
+    formModal.classList.add('form-modal')
+
+    formModal.insertAdjacentHTML("afterbegin", `
+        <h2>Deseja mesmo deletar sua conta?</h2>
+        <button type="submit" id="btn-cancelar" class="buttonBrand1 buttonModal">Não desejo deletar minha conta</button>
+        <button type="submit" id="btn-deletar" class="buttonBrand1 buttonModal">Quero deletar minha conta</button>
+    `)
+
+
+    return formModal
+}

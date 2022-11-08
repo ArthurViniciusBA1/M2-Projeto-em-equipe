@@ -14,7 +14,7 @@
 .form-modal{
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 90%;
     gap: 20px;
     align-items: center;
     margin: 20px 0;
@@ -44,9 +44,10 @@
 }
 
 .bg-modal h2{
-    font-size: 32px;
+    font-size: 24px;
     color: var(--brand-1);
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .bg-modal button {
@@ -67,4 +68,21 @@
     top: 15px;
     right: 15px;
     font-size: var(--font-size-text1);
+}
+
+.bg-modal input{
+    width: 300px;
+    max-width: 100%;
+}
+
+@keyframes modalAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-60%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
