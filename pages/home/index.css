@@ -1,0 +1,18 @@
+@import url(../../styles/global.css);
+
+header {
+    background-color: var(--white-2);
+    border-bottom: 1px solid var(--bg-modal);
+}
+
+.listaPets {
+    width: 90%;
+}
+
+
+@media (min-width: 800px) {
+    
+    footer p {
+        width: fit-content;
+    }
+}

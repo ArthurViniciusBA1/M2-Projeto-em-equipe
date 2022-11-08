@@ -1,6 +1,6 @@
 import { receberForm } from "./inputs.js"
 import { abrirModal, modalCadastrar } from "./modal.js"
-import { login } from "./request.js"
+import { login, meusPets } from "./request.js"
 
 const formularioLogin = document.querySelector(".formLogin")
 const botaoCadastrar  = document.querySelector(".cadastrar")

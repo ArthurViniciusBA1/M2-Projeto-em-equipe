@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/buttons.css">
+    <link rel="stylesheet" href="./index.css">
     <title>Home</title>
 </head>
 <body>
-    
+    <header class="margemBaixo">
+        <img src="../../assets/img/Logo vermelho.svg" alt="KenziePets Logo" class="filterRed">
+        <nav>
+            <button>Perfil</button>
+            <button class="buttonBrand1">Logout</button>
+        </nav>
+    </header>
+    <main>
+        <ul class="listaPets margemCentral">
+            <li class="cardPet">
+                <figure class="fotoPet">
+                    <img src="../../assets/img/Avatar animal.svg" alt="Animal">
+                </figure>
+                <section class="infoPet">
+                    <h2 class="nomePet">Bidu</h2>
+                    <p class="especiePet">Cachorro</p>
+                </section>
+                <button class="botaoAdotar">Me adota?</button>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <p class="margemCentral">KenziePets | Todos os Direitos Reservados</p>
+    </footer>
+    <script type="module" src="./index.js"></script>
 </body>
 </html>

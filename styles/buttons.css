@@ -9,13 +9,20 @@
     font-weight: 600;
     font-size: 1rem;
 
-    color: var(--white);
+    color: var(--white-2);
 
     border: var(--brand-1) 1px solid;
 }
 
 .buttonBrand1:hover{
-    background-color: var(--white);
+    background-color: var(--white-2);
 
     color: var(--brand-1);
+}
+
+.botaoAdotar{
+    background-color: var(--brand-3);
+    border: 1px solid  var(--brand-3);
+    border-radius: 30px;
+    color: var(--white-2);
 }
