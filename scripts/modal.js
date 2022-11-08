@@ -143,7 +143,6 @@ export const modalAtualizarPerfil = ({ name, avatar_url }) => {
     formModal.addEventListener("submit", async (event) => {
         event.preventDefault()
         let corpo = receberForm(formModal.elements)
-        console.log(corpo)
         await atualizarPerfil(corpo)
     })
    
