@@ -78,7 +78,11 @@ button {
 
 @media (min-width: 800px) {
     .botaoAdocao {
-        max-width: 50%;
+        max-width: 90%;
         padding: 0.8vh 2vw;
+    }
+
+    .buttonDropdown {
+        display: none;
     }
 }
