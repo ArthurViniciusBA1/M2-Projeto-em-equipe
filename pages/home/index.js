@@ -66,7 +66,7 @@ function criaCard(pet, idUsuario, listaHtml) {
   listaHtml.append(card);
 }
 
-function botaoLogoutEvent() {
+export function botaoLogoutEvent() {
   const botaoLogout = document.querySelector("#logout");
 
   botaoLogout.addEventListener("click", () => {
