@@ -15,6 +15,12 @@
     color: var(--brand-1);
 }
 
+.buttonBrand2 {
+    background-color: var(--white-2);
+    border-radius: 30px;
+    color: var(--brand-1);
+}
+
 .buttonDropdown {
     display: flex;
     justify-content: center;
