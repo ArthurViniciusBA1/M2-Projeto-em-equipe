@@ -23,7 +23,7 @@
 .botaoAdocao {
     border-radius: 30px;
 }
-.meAdota{
+.meAdota {
     background-color: var(--brand-3);
     border: 1px solid  var(--brand-3);
     color: var(--white-2);
