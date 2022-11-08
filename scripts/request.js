@@ -116,7 +116,6 @@ export async function adotaPet(token, body) {
 export async function atualizarPerfil(body) {
     try {
         let token = recebeLocalStorage()
-        console.log(token)
         let atualiza = await fetch('https://m2-api-adot-pet.herokuapp.com/users/profile', {
             method: 'PATCH',
             headers: {

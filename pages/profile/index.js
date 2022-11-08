@@ -62,7 +62,6 @@ async function atualizarPerfilEvent() {
 
   const token = JSON.parse(localStorage.getItem("token"));
   const perfilInfo = await meuPerfil(token);
-  console.log(perfilInfo);
 
   botaoAttPerfil.addEventListener("click", () =>
     abrirModal(modalAtualizarPerfil(perfilInfo))
