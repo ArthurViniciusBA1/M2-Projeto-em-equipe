@@ -22,8 +22,15 @@
 
 .botaoAdocao {
     border-radius: 30px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    max-width: 70%;
+    align-self: center;
+    padding: 0.8vh 5vw;
+    margin-bottom: 2vh;
 }
-.meAdota {
+.meAdota{
     background-color: var(--brand-3);
     border: 1px solid  var(--brand-3);
     color: var(--white-2);
@@ -35,4 +42,11 @@
 }
 .indisponivel {
     border: 1px solid  var(--white-1);
+}
+
+@media (min-width: 800px) {
+    .botaoAdotar{
+        max-width: 50%;
+        padding: 0.8vh 2vw;
+    }
 }

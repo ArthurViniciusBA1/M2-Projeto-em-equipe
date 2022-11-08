@@ -4,22 +4,25 @@
 @import url(./buttons.css);
 @import url(./modal.css);
 @import url(./input.css);
-@import url(./margins.css);
 
 
 :root {
     --brand-1: #962027;
     --brand-2: #b94149;
     --brand-3: #CC5833;
+    --brand-opaca: rgba(150, 32, 39, 0.2);
 
     --contrast: #B48CF2;
 
-    --bg-modal: hsla(210, 7%, 56%, 0.466);
+    --bg-modal: #878f9777;
     --modal: #fff;
+
 
     --black: #000000;
     --white-1: #D8D8D7;
     --white-2: #FFF8E7;
+    --grey-1: #90A4AE;
+    
 
     --alert-success: #5bdb77;
 
@@ -27,6 +30,9 @@
     --font-2: 1.25rem;
     --font-3: 1rem;
     --font-4: 0.875rem;
+    --font-5: 1.5rem;
+    --font-6: 0.5rem;
+    --font-7: 0.75rem;
 }
 
 body {
