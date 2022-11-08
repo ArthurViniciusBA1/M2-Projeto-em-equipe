@@ -1,6 +1,5 @@
 import { receberForm } from "./inputs.js"
 import { atualizarPet, cadastroUsuario } from "./request.js"
-import { cadastroUsuario, atualizarPerfil } from "./request.js"
 
 const body = document.querySelector('body')
 
