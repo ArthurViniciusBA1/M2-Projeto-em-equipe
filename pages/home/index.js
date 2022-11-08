@@ -49,7 +49,7 @@ function criaCard(pet, idUsuario, listaHtml) {
     });
   } else {
     if (pet.guardian.id == idUsuario) {
-      botaoAdotar.innerText = "Você já adotou\neste pet";
+      botaoAdotar.innerText = "Já adotou";
       botaoAdotar.classList = "botaoAdocao adotado";
       botaoAdotar.setAttribute("disabled", true);
     } else {
