@@ -1,6 +1,6 @@
 import { receberForm } from "./inputs.js";
 import { recebeLocalStorage } from "./localStorage.js";
-import { cadastroUsuario, atualizarPerfil, deletarPerfil } from "./request.js";
+import { atualizarPet, cadastroUsuario, deletarPerfil } from "./request.js";
 
 const body = document.querySelector("body");
 
@@ -18,6 +18,16 @@ export const abrirModal = (children) => {
   btnFechar.classList.add("fechar-modal");
 
   btnFechar.innerText = "X";
+
+  btnFechar.addEventListener("click", () => {
+    fundoDoModal.remove();
+  });
+
+  modal.appendChild(btnFechar);
+  bgModal.append(children);
+  modal.append(bgModal);
+  fundoDoModal.append(modal);
+  body.appendChild(fundoDoModal);
 
   btnFechar.addEventListener("click", () => {
     fundoDoModal.remove();
@@ -74,11 +84,19 @@ export const modalAtualizarPet = () => {
     "afterbegin",
     `
     <h2>Atualizar pet</h2>
-    <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar" class="input-padrao"
-    required>
+    <input type="avatar" value=${name} name="nome" id="name" placeholder="Nome" class="input-padrao" required>
+    <input type="text" value=${bread} name="bread" id="bread" placeholder="Raça" class="input-padrao" required>
+    <input type="text" value=${species} name="especie" id="species" placeholder="Espécie" class="input-padrao" required>
+    <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar" class="input-padrao" required>
     <button type="submit" class="buttonBrand1">Atualizar</button>
     `
   );
+
+  formModal.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let corpo = receberForm(formModal.elements);
+    atualizarPet(corpo);
+  });
 
   return formModal;
 };
