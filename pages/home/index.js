@@ -74,6 +74,7 @@ function botaoLogoutEvent() {
     window.location.replace("../../index.html");
   });
 }
+
 function botaoPerfilEvent() {
   const botaoPerfil = document.querySelector("#perfil");
 
