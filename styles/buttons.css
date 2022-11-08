@@ -9,11 +9,28 @@
     font-weight: 600;
     font-size: 1rem;
 
+<<<<<<< HEAD
     color: var(--white-1);
+=======
+    color: var(--white-2);
+>>>>>>> e71173435c52f60e9293aba13840b90aebb220cc
 
     border: var(--brand-1) 1px solid;
 }
 
 .buttonBrand1:hover{
+<<<<<<< HEAD
     background-color: transparent;
+=======
+    background-color: var(--white-2);
+
+    color: var(--brand-1);
+}
+
+.botaoAdotar{
+    background-color: var(--brand-3);
+    border: 1px solid  var(--brand-3);
+    border-radius: 30px;
+    color: var(--white-2);
+>>>>>>> e71173435c52f60e9293aba13840b90aebb220cc
 }
