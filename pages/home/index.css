@@ -53,13 +53,14 @@ main {
 
 .fotoPet {
     width: 100%;
+    height: 250px;
 }
 
 .fotoPet img {
     width: 100%;
     height: 100%;
     border-radius: 20px 20px 0 0;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .infoPet {
