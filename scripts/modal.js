@@ -1,6 +1,5 @@
-import { receberForm } from "./inputs.js";
-import { recebeLocalStorage } from "./localStorage.js";
-import { atualizarPet, cadastroUsuario, deletarPerfil } from "./request.js";
+import { receberForm } from "./inputs.js"
+import { cadastroUsuario, atualizarPerfil, cadastrarPet } from "./request.js"
 
 const body = document.querySelector("body");
 
@@ -118,8 +117,14 @@ export const modalCadastrarPet = () => {
     `
   );
 
-  return formModal;
-};
+  formModal.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let corpo = receberForm(formModal.elements);
+    cadastrarPet(corpo);
+  });
+
+    return formModal
+}
 
 export const modalAtualizarPerfil = ({ name, avatar_url }) => {
   let formModal = document.createElement("form");
@@ -133,17 +138,17 @@ export const modalAtualizarPerfil = ({ name, avatar_url }) => {
             <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar"
             class="input-padrao" required>
         <button type="submit" class="buttonBrand1">Cadastrar</button>
-    `
-  );
-
-  formModal.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    let corpo = receberForm(formModal.elements);
-    await atualizarPerfil(corpo);
-  });
-
-  return formModal;
-};
+    `)
+    
+    formModal.addEventListener("submit", async (event) => {
+        event.preventDefault()
+        let corpo = receberForm(formModal.elements)
+        console.log(corpo)
+        await atualizarPerfil(corpo)
+    })
+   
+    return formModal
+}
 
 export const modalDeletarPerfil = () => {
   const token = recebeLocalStorage();

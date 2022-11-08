@@ -1,6 +1,7 @@
 import {
   abrirModal,
   modalAtualizarPerfil,
+  modalCadastrarPet,
   modalDeletarPerfil,
 } from "../../scripts/modal.js";
 import { meuPerfil, meusPetParaAdocao, meusPets } from "../../scripts/request.js";
@@ -146,10 +147,19 @@ async function deletarPerfil() {
   });
 }
 
+function cadastrarPet() {
+    const novoPet = document.querySelector("#cadastrarNovoPet")
+
+    novoPet.addEventListener("click", () => {
+        abrirModal(modalCadastrarPet())
+    })
+}
+
+
 botaoHomeEvent();
 botaoLogoutEvent();
 atualizarPerfilEvent();
-adotarPet()
+cadastrarPet()
 criarPerfil();
 deletarPerfil();
 renderizaCardPetProfile()

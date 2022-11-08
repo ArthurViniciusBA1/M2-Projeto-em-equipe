@@ -175,26 +175,24 @@ export async function deletarPerfil(token) {
   }
 }
 
-export async function cadastrarPet(token, body) {
-  try {
-    let cadastraPet = await fetch(
-      "https://m2-api-adot-pet.herokuapp.com/users/profile",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${JSON.parse(token)}`,
-        },
-        body: JSON.stringify(body),
-      }
-    );
+export async function cadastrarPet(body) {
+    try {
+        let token = recebeLocalStorage()
+        let cadastraPet = await fetch('https://m2-api-adot-pet.herokuapp.com/pets', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify(body)
+        })
+        await cadastraPet.json()
+        
+        window.location.reload()
 
-    await cadastraPet.json();
-
-    window.location.reload();
-  } catch (err) {
-    console.log(err);
-  }
+    } catch(err) {
+        console.log(err)
+    }
 }
 
 export async function atualizarPet(token, body, idPet) {
