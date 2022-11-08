@@ -139,9 +139,9 @@ footer p {
         gap: 3vw;
         justify-content: center;
         overflow-y: scroll;
-        height: 85vh;
-        width: 75%;
-        margin: 0 auto;
+        height: 65vh;
+        width: 55%;
+        margin: 5% auto;
     }
     
     .cardPet {
@@ -149,15 +149,19 @@ footer p {
         display: flex;
         flex-direction: column;
         height: 50vh;
-        min-width: 20vw;
-        max-width: 20vw;
+        min-width: 13vw;
+        max-width: 13vw;
         background-color: var(--white-2);
         box-shadow: 0px 0px 18px -5px var(--brand-1);
     }
 
+    .fotoPet {
+        border-radius: 8px 8px 0 0;
+    }
+
     .fotoPet img {
-        min-width: 18vw;
-        max-width: 20vw;
+        min-width: 13vw;
+        max-width: 13vw;
         height: 30vh;
         border-radius: 8px 8px 0 0;
         object-fit: cover;
