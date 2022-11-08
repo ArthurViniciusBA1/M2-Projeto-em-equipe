@@ -1,5 +1,10 @@
-import { abrirModal, modalAtualizarPerfil } from "../../scripts/modal.js";
+import {
+  abrirModal,
+  modalAtualizarPerfil,
+  modalDeletarPerfil,
+} from "../../scripts/modal.js";
 import { meuPerfil, meusPets } from "../../scripts/request.js";
+import { recebeLocalStorage } from "../../scripts/localStorage.js";
 
 const token = JSON.parse(localStorage.getItem("token"));
 const dadosPessoais = document.querySelector(".dados");
@@ -14,30 +19,30 @@ async function criarPerfil() {
     <h2><span>Nome:</span> ${perfil.name}</h2>
     <h2><span>E-mail:</span> ${perfil.email}</h2>
     `
-    );
-    if (listaMeusPets.length == 0) {
-        dadosPessoais.insertAdjacentHTML(
-            "beforeend",
-            `
+  );
+  if (listaMeusPets.length == 0) {
+    dadosPessoais.insertAdjacentHTML(
+      "beforeend",
+      `
             <h2>Você ainda não adotou nenhum pet</h2>
             `
-            )
-    } else if (listaMeusPets.length == 1) {
-        dadosPessoais.insertAdjacentHTML(
-            "beforeend",
-            `
+    );
+  } else if (listaMeusPets.length == 1) {
+    dadosPessoais.insertAdjacentHTML(
+      "beforeend",
+      `
             <h2><span>Você adotou:</span> ${listaMeusPets.length} pet</h2>
             `
-            )
-    } else {
-        dadosPessoais.insertAdjacentHTML(
-            "beforeend",
-            `
+    );
+  } else {
+    dadosPessoais.insertAdjacentHTML(
+      "beforeend",
+      `
             <h2><span>Você adotou:</span> ${listaMeusPets.length} pets</h2>
             `
-            )
-    }
-    imagemPerfil.src = perfil.avatar_url;
+    );
+  }
+  imagemPerfil.src = perfil.avatar_url;
 }
 
 function botaoHomeEvent() {
@@ -68,9 +73,17 @@ async function atualizarPerfilEvent() {
   );
 }
 
+async function deletarPerfil() {
+  const botaoDeletarPerfil = document.querySelector("#deletarConta");
+  const token = recebeLocalStorage();
 
+  botaoDeletarPerfil.addEventListener("click", () => {
+    abrirModal(modalDeletarPerfil());
+  });
+}
 
 botaoHomeEvent();
 botaoLogoutEvent();
 atualizarPerfilEvent();
 criarPerfil();
+deletarPerfil();
