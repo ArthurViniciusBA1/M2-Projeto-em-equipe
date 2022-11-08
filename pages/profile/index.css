@@ -58,3 +58,15 @@ main{
     border: 2px solid var(--white-1);
     border-radius: 50%;
 }
+
+.dadosPessoais{
+    display: flex;
+    flex-direction: column;
+
+    
+
+    margin: 20px auto 0 auto;
+    width: fit-content;
+
+    padding: 24px;
+}
