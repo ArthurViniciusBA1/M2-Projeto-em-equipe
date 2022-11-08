@@ -1,10 +1,12 @@
 @import url(../../styles/global.css);
 
-body{
+body {
     width: 100vw;
+
+    overflow-x: hidden;
 }
 
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,20 +16,20 @@ header{
     margin: 0 auto;
 }
 
-header>img{
+header>img {
     height: 30px;
 }
 
-header>div{
+header>div {
     display: flex;
     gap: 24px;
 }
 
-main{
+main {
     width: 100vw;
 }
 
-.cabecalho{
+.cabecalho {
     background-color: var(--brand-1);
     display: flex;
     align-items: flex-end;
@@ -39,14 +41,14 @@ main{
     position: relative;
 }
 
-.cabecalho>div{
-    color: purple;  
+.cabecalho>div {
+    color: var(--white-1);
 
     height: 40%;
     width: 100%;
 }
 
-.cabecalho>img{
+.cabecalho>img {
     position: absolute;
 
     width: 180px;
@@ -54,19 +56,50 @@ main{
 
     object-fit: cover;
 
-    bottom: 80px;
-    border: 2px solid var(--white-1);
+    bottom: 20px;
+    border: 4px solid var(--white-1);
     border-radius: 50%;
 }
 
-.dadosPessoais{
+.dadosPessoais {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+
+    margin: 20px auto 0 auto;
+    width: 40%;
+
+    padding: 24px;
+}
+
+.dadosPessoais>h1 {
+    font-weight: 700;
+    font-size: 24px;
+
+    color: var(--brand-1);
+
+    text-align: center;
+}
+
+.dadosPessoais>.dados {
     display: flex;
     flex-direction: column;
 
-    
+    gap: 8px;
 
-    margin: 20px auto 0 auto;
-    width: fit-content;
+    font-weight: 600;
+    font-size: 16px;
 
-    padding: 24px;
+    color: var(--black);
+}
+
+.dadosPessoais>.dados>h2>span {
+    color: var(--brand-1);
+}
+
+.dadosPessoais>.botoes{
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
 }
