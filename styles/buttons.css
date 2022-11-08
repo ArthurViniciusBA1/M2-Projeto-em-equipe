@@ -8,6 +8,9 @@ button {
     font-weight: 600;
     font-size: 1rem;
     border-radius: 30px;
+    padding: 4px 16px;
+
+    cursor: pointer;
 }
 
 .buttonBrand1 {
