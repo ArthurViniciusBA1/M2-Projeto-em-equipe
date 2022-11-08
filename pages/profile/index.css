@@ -1,10 +1,12 @@
 @import url(../../styles/global.css);
 
-body{
+body {
     width: 100vw;
+
+    overflow-x: hidden;
 }
 
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,20 +16,20 @@ header{
     margin: 0 auto;
 }
 
-header>img{
+header>img {
     height: 30px;
 }
 
-header>div{
+header>div {
     display: flex;
     gap: 24px;
 }
 
-main{
+main {
     width: 100vw;
 }
 
-.cabecalho{
+.cabecalho {
     background-color: var(--brand-1);
     display: flex;
     align-items: flex-end;
@@ -39,14 +41,14 @@ main{
     position: relative;
 }
 
-.cabecalho>div{
-    color: purple;  
+.cabecalho>div {
+    color: var(--white-1);
 
     height: 40%;
     width: 100%;
 }
 
-.cabecalho>img{
+.cabecalho>img {
     position: absolute;
 
     width: 180px;
@@ -54,25 +56,75 @@ main{
 
     object-fit: cover;
 
-    bottom: 80px;
-    border: 2px solid var(--white-1);
+    bottom: 20px;
+    border: 4px solid var(--white-1);
     border-radius: 50%;
 }
 
-.listaDePets{
+.dadosPessoais {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+
+    margin: 20px auto 0 auto;
+    width: 40%;
+
+    padding: 24px;
+}
+
+.dadosPessoais>h1 {
+    font-weight: 700;
+    font-size: 24px;
+
+    color: var(--brand-1);
+
+    text-align: center;
+}
+
+.dadosPessoais>.dados {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-weight: 600;
+    font-size: 16px;
+
+    color: var(--black);
+}
+
+.dadosPessoais>.dados>h2>span {
+    color: var(--brand-1);
+}
+
+.dadosPessoais>.botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+section {
+    width: 90%;
+
+    margin: 90px auto 0 auto;
+}
+
+.listaDePets {
     width: 100%;
     max-width: 1024px;
     height: max-content;
     display: flex;
     gap: 30px;
-    flex-direction:column;
+    flex-direction: column;
     background-color: gray;
     flex-wrap: wrap;
     align-items: center;
     margin-top: 20px;
 }
 
-.cardPet2{
+.cardPet2 {
     display: flex;
     flex-direction: column;
     width: 280px;
@@ -82,13 +134,13 @@ main{
     border-radius: 4px;
 }
 
-.caixaImagem{
+.caixaImagem {
     width: 100%;
     height: 180px;
     border-radius: 4px 4px 0 0;
 }
 
-.corpoCard{
+.corpoCard {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -96,11 +148,17 @@ main{
     padding: 10px;
 }
 
-.bgImg{
+.bgImg {
     width: 100%;
     height: 100%;
     background-image: url('../../assets/img/animalTest.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media (min-width: 769px) {
+    .dadosPessoais>.botoes {
+        flex-direction: row;
+    }
 }

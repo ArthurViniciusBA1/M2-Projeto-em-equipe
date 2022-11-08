@@ -1,3 +1,4 @@
+import { recebeLocalStorage } from "./localStorage.js"
 import { fecharModal } from "./modal.js"
 
 let urlBase = "https://m2-api-adot-pet.herokuapp.com"
@@ -129,13 +130,14 @@ export async function meusPetParaAdocao(token) {
     }
 }
 
-export async function atualizarPerfil(token, body) {
+export async function atualizarPerfil(body) {
     try {
+        let token = recebeLocalStorage()
         let atualiza = await fetch('https://m2-api-adot-pet.herokuapp.com/users/profile', {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${JSON.parse(token)}`
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify(body)
         })

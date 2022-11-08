@@ -1,5 +1,6 @@
 import { receberForm } from "./inputs.js"
 import { atualizarPet, cadastroUsuario } from "./request.js"
+import { cadastroUsuario, atualizarPerfil } from "./request.js"
 
 const body = document.querySelector('body')
 
@@ -108,21 +109,26 @@ export const modalCadastrarPet = () => {
     return formModal
 }
 
-export const modalAtualizarPerfil = () => {
+export const modalAtualizarPerfil = ({name, avatar_url}) => {
 
     let formModal = document.createElement('form')
     formModal.classList.add('form-modal')
 
     formModal.insertAdjacentHTML("afterbegin", `
         <h2>Atualizar perfil</h2>
-            <input type="text" name="nome" id="name" placeholder="Nome" class="input-padrao" required>
-            <input type="email" name="email" id="email" placeholder="E-mail" class="input-padrao" required>
-            <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar"
+            <input type="text" value=${name} name="nome" id="name" placeholder="Nome" class="input-padrao" required>
+            <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar"
             class="input-padrao" required>
         <button type="submit" class="buttonBrand1">Cadastrar</button>
     `)
-
-
+    
+    formModal.addEventListener("submit", async (event) => {
+        event.preventDefault()
+        let corpo = receberForm(formModal.elements)
+        console.log(corpo)
+        await atualizarPerfil(corpo)
+    })
+   
     return formModal
 }
 
