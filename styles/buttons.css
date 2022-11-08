@@ -36,7 +36,23 @@
     border: var(--brand-1) 1px solid;
 }
 
-.botaoAdotar{
+.buttonDropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    background-color: var(--white-2);
+    border-radius: 30px;
+
+    font-weight: 600;
+    font-size: 1rem;
+
+    color: var(--brand-1);
+
+    border: none;
+}
+
+.botaoAdotar {
     background-color: var(--brand-3);
     border: 1px solid  var(--brand-3);
     border-radius: 30px;
