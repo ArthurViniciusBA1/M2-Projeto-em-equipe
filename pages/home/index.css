@@ -2,6 +2,7 @@
 
 body {
     background-color: var(--white-2);
+    width: 100%;
 }
 
 header {
@@ -19,7 +20,6 @@ main {
 .listaPets {
     display: flex;
     gap: 8vw;
-    width: 90vw;
     height: 70vh;
     align-items: center;
     overflow-x: scroll;
