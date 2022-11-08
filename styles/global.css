@@ -12,14 +12,19 @@
     --brand-3: #CC5833;
     --brand-opaca: #96202733;
 
+    --contrast: #B48CF2;
+
     --bg-modal: #878f9777;
     --modal: #fff;
+
 
     --black: #000000;
     --white-1: #D8D8D7;
     --white-2: #FFF8E7;
     --grey-1: #90A4AE;
     
+
+    --alert-success: #5bdb77;
 
     --font-1: 2rem;
     --font-2: 1.25rem;

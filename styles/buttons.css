@@ -2,38 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: var(--brand-1);
     border-radius: 30px;
-
     font-weight: 600;
     font-size: 1rem;
-
     color: var(--white-2);
-
     border: var(--brand-1) 1px solid;
 }
 
 .buttonBrand1:hover{
     background-color: var(--white-2);
-
     color: var(--brand-1);
-}
-
-.buttonBrand2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: var(--white-2);
-    border-radius: 30px;
-
-    font-weight: 600;
-    font-size: 1rem;
-
-    color: var(--brand-1);
-
-    border: var(--brand-1) 1px solid;
 }
 
 .buttonDropdown {
@@ -43,21 +22,18 @@
     height: 5vh;
     background-color: var(--white-2);
     border-radius: 30px;
-
     font-weight: 600;
     font-size: 1rem;
-
     color: var(--brand-1);
-
     border: none;
 }
 
-.botaoAdotar {
-    background-color: var(--brand-3);
-    border: 1px solid  var(--brand-3);
+.botaoAdocao {
     border-radius: 30px;
-    color: var(--white-2);
     font-weight: 600;
+    font-size: 1rem;
+    color: var(--brand-1);
+    border: var(--brand-1) 1px solid;
     text-align: center;
     cursor: pointer;
     max-width: 70%;
@@ -66,8 +42,24 @@
     margin-bottom: 2vh;
 }
 
+.meAdota {
+    background-color: var(--brand-3);
+    border: 1px solid  var(--brand-3);
+    color: var(--white-2);
+}
+
+.adotado {
+    background-color: var(--alert-success);
+    border: 1px solid  var(--alert-success);
+    color: var(--white-2);
+}
+
+.indisponivel {
+    border: 1px solid  var(--white-1);
+}
+
 @media (min-width: 800px) {
-    .botaoAdotar{
+    .botaoAdocao {
         max-width: 50%;
         padding: 0.8vh 2vw;
     }
