@@ -103,3 +103,9 @@ main {
 
     gap: 10px;
 }
+
+section{
+    width: 90%;
+
+    margin: 90px auto 0 auto;
+}
