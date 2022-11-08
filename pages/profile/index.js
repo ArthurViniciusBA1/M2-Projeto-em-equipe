@@ -48,6 +48,8 @@ async function atualizarPerfilEvent() {
   );
 }
 
+
+
 botaoHomeEvent();
 botaoLogoutEvent();
 atualizarPerfilEvent();
