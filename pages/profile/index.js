@@ -4,7 +4,7 @@ import {
     modalCadastrarPet,
     modalDeletarPerfil,
 } from "../../scripts/modal.js";
-import { meuPerfil, meusPets } from "../../scripts/request.js";
+import { meuPerfil, meusPetParaAdocao, meusPets } from "../../scripts/request.js";
 
 
 const token = JSON.parse(localStorage.getItem("token"));
