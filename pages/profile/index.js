@@ -126,9 +126,14 @@ async function renderizaCardPetProfile() {
             ul.append(criaCardPetProfile(element))
     })}
     else{
+        let caixaVazia = document.createElement('div')
         let textoVazio = document.createElement('h2')
         textoVazio.innerText = 'Sem Pets para adoção'
-        ul.appendChild(textoVazio)
+
+        caixaVazia.classList.add('caixaVazia')
+
+        caixaVazia.appendChild(textoVazio)
+        ul.appendChild(caixaVazia)
     }
 
 }
