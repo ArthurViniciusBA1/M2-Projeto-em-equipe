@@ -35,6 +35,8 @@ export async function login(usuario) {
         let loginJson = await login.json()
         localStorage.setItem("token", JSON.stringify(loginJson.token))
         
+        window.location.replace('../pages/home/index.html')
+
         return loginJson
 
     } catch (err) {
