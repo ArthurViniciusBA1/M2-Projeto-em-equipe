@@ -13,7 +13,7 @@ const imagemPerfil = document.querySelector(".cabecalho img");
 
 async function criarPerfil() {
   let perfil = await meuPerfil(token);
-  let listaMeusPets = await meusPets(token);
+  let listaMeusPets = await meusPetParaAdocao(token);
   dadosPessoais.insertAdjacentHTML(
     "afterbegin",
     `
