@@ -88,4 +88,27 @@ export async function meusPets(token) {
     } catch (err) {
         console.log(err)
     }
+<<<<<<< HEAD
+=======
+}
+
+export async function adotaPet(token, body) {
+    try {
+        let adotar = await fetch('https://m2-api-adot-pet.herokuapp.com/adoptions', {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json',
+                    'Authorization': `Bearer ${JSON.parse(token)}`
+                },
+                body: JSON.stringify(body)
+        })
+
+        await adotar.json()
+
+        window.location.reload()
+
+    } catch (err) {
+        console.log(err)
+    }
+>>>>>>> b3d8a63ad53eaafb148fe6b935300346aac08d1b
 }

@@ -2,12 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: var(--brand-1);
     border-radius: 30px;
-
     font-weight: 600;
     font-size: 1rem;
+<<<<<<< HEAD
 
     color: var(--white-2);
 
@@ -47,3 +46,69 @@
     border-radius: 30px;
     color: var(--white-2);
 }
+=======
+    color: var(--white-2);
+    border: var(--brand-1) 1px solid;
+}
+
+.buttonBrand1:hover{
+    background-color: var(--white-2);
+    color: var(--brand-1);
+}
+
+.buttonBrand2 {
+    background-color: var(--white-2);
+    border-radius: 30px;
+    color: var(--brand-1);
+}
+
+.buttonDropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    background-color: var(--white-2);
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--brand-1);
+    border: none;
+}
+
+.botaoAdocao {
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--brand-1);
+    border: var(--brand-1) 1px solid;
+    text-align: center;
+    cursor: pointer;
+    max-width: 70%;
+    align-self: center;
+    padding: 0.8vh 5vw;
+    margin-bottom: 2vh;
+}
+
+.meAdota {
+    background-color: var(--brand-3);
+    border: 1px solid  var(--brand-3);
+    color: var(--white-2);
+}
+
+.adotado {
+    background-color: var(--alert-success);
+    border: 1px solid  var(--alert-success);
+    color: var(--white-2);
+}
+
+.indisponivel {
+    border: 1px solid  var(--white-1);
+}
+
+@media (min-width: 800px) {
+    .botaoAdocao {
+        max-width: 50%;
+        padding: 0.8vh 2vw;
+    }
+}
+>>>>>>> b3d8a63ad53eaafb148fe6b935300346aac08d1b
