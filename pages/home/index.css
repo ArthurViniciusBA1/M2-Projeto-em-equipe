@@ -40,7 +40,7 @@ main {
     gap: 8vw;
     align-items: center;
     width: 90%;
-    padding: 1vh 3vw 0 3vh;
+    padding: 1vh 3vw;
     overflow-y: scroll;
     height: 88vh;
     flex-direction: column;
