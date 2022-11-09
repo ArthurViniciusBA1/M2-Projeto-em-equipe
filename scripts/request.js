@@ -126,22 +126,6 @@ export async function adotaPet(body) {
 
 export async function meusPetParaAdocao() {
   try {
-<<<<<<< HEAD
-    let token = recebeLocalStorage()
-    let adotar = await fetch('https://m2-api-adot-pet.herokuapp.com/adoptions/myAdoptions', {
-      method: "GET",
-      headers: {
-        'Content-type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
-    })
-    let adotados = await adotar.json()
-
-    return adotados
-
-  } catch (err) {
-    console.log(err)
-=======
     let token = recebeLocalStorage();
     let adotar = await fetch(
       "https://m2-api-adot-pet.herokuapp.com/adoptions/myAdoptions",
@@ -158,7 +142,6 @@ export async function meusPetParaAdocao() {
     return adotados;
   } catch (err) {
     console.log(err);
->>>>>>> ebb2e88f06c75e30be35a420fe39b76c9f1162a1
   }
 }
 
@@ -210,20 +193,6 @@ export async function deletarPerfil() {
 
 export async function cadastrarPet(body) {
   try {
-<<<<<<< HEAD
-    let token = recebeLocalStorage()
-    let cadastraPet = await fetch('https://m2-api-adot-pet.herokuapp.com/pets', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
-      },
-      body: JSON.stringify(body)
-    })
-    await cadastraPet.json()
-
-    window.location.reload()
-=======
     let token = recebeLocalStorage();
     let cadastraPet = await fetch(
       "https://m2-api-adot-pet.herokuapp.com/pets",
@@ -237,7 +206,6 @@ export async function cadastrarPet(body) {
       }
     );
     await cadastraPet.json();
->>>>>>> ebb2e88f06c75e30be35a420fe39b76c9f1162a1
 
     window.location.reload();
   } catch (err) {
@@ -247,11 +215,7 @@ export async function cadastrarPet(body) {
 
 export async function atualizarPet(body, idPet) {
   try {
-<<<<<<< HEAD
-    let token = recebeLocalStorage()
-=======
     let token = recebeLocalStorage();
->>>>>>> ebb2e88f06c75e30be35a420fe39b76c9f1162a1
     let atualizaPet = await fetch(
       `https://m2-api-adot-pet.herokuapp.com/pets/${idPet}`,
       {
@@ -276,11 +240,7 @@ export async function atualizarPet(body, idPet) {
 
 export async function deletarPet(idPet) {
   try {
-<<<<<<< HEAD
-    let token = recebeLocalStorage()
-=======
     let token = recebeLocalStorage();
->>>>>>> ebb2e88f06c75e30be35a420fe39b76c9f1162a1
     let deletaPet = await fetch(
       `https://m2-api-adot-pet.herokuapp.com/pets/${idPet}`,
       {
@@ -294,10 +254,6 @@ export async function deletarPet(idPet) {
     await deletaPet.json();
 
     window.location.reload();
-<<<<<<< HEAD
-
-=======
->>>>>>> ebb2e88f06c75e30be35a420fe39b76c9f1162a1
   } catch (err) {
     console.log(err);
   }
