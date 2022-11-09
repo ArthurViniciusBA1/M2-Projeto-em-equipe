@@ -6,16 +6,16 @@ const body = document.querySelector("body");
 
 export const abrirModal = (children) => {
   const fundoDoModal = document.createElement("div");
-  fundoDoModal.classList.add("fundo-do-modal");
+  fundoDoModal.classList.add("fundoDoModal");
 
   const modal = document.createElement("div");
   modal.classList = "modal";
 
   const bgModal = document.createElement("div");
-  bgModal.classList.add("bg-modal");
+  bgModal.classList.add("bgModal");
 
   const btnFechar = document.createElement("button");
-  btnFechar.classList.add("fechar-modal");
+  btnFechar.classList.add("fecharModal");
 
   btnFechar.addEventListener("click", () => {
     fundoDoModal.remove();
@@ -40,18 +40,18 @@ export const abrirModal = (children) => {
 
 export const modalCadastrar = () => {
   let formModal = document.createElement("form");
-  formModal.classList.add("form-modal");
+  formModal.classList.add("formModal");
 
   formModal.insertAdjacentHTML(
     "afterbegin",
     `
         <h2>Cadastrar</h2>
             <input type="text" name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
-            <input type="email" name="email" id="email" placeholder="E-mail" class="input-padrao" required>
-            <input type="password" name="senha" id="password" placeholder="Senha" class="input-padrao" required>
+            <input type="email" name="email" id="email" placeholder="E-mail" class="inputPadrao" required>
+            <input type="password" name="senha" id="password" placeholder="Senha" class="inputPadrao" required>
             <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar"
-            class="input-padrao" required>
-        <button type="submit" class="buttonBrand1">Cadastrar</button>
+            class="inputPadrao" required>
+        <button type="submit" class="botaoBrand1">Cadastrar</button>
     `
   );
 
@@ -65,7 +65,7 @@ export const modalCadastrar = () => {
 };
 
 export const fecharModal = (request) => {
-  const modal = document.querySelector(".fundo-do-modal");
+  const modal = document.querySelector(".fundoDoModal");
 
   if (request) {
     modal.remove();
@@ -76,7 +76,7 @@ export const fecharModal = (request) => {
 
 export const modalAtualizarPet = ({name, bread, species, avatar_url, id}) => {
   let formModal = document.createElement("form");
-  formModal.classList = "form-modal modalAtualizar";
+  formModal.classList = "formModal modalAtualizar";
 
   formModal.insertAdjacentHTML(
     "afterbegin",
@@ -90,7 +90,7 @@ export const modalAtualizarPet = ({name, bread, species, avatar_url, id}) => {
         <input type="text" value=${species} name="especie" id="species" placeholder="Espécie" class="inputPadrao" required>
       <label for="avatar">Avatar</label>
         <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar" class="inputPadrao" required>
-    <button type="submit" class="buttonBrand1">Atualizar</button>
+    <button type="submit" class="botaoBrand1">Atualizar</button>
     `
   );
 
@@ -105,7 +105,7 @@ export const modalAtualizarPet = ({name, bread, species, avatar_url, id}) => {
 
 export const modalCadastrarPet = () => {
   let formModal = document.createElement("form");
-  formModal.classList = "form-modal modalAtualizar";
+  formModal.classList = "formModal modalAtualizar";
 
   formModal.insertAdjacentHTML(
     "afterbegin",
@@ -118,11 +118,11 @@ export const modalCadastrarPet = () => {
           <option value="Cachorro">Cachorro</option>
           <option value="Gato">Gato</option>
           <option value="Aves">Aves</option>
-          <option value="Repiteis">Répiteis</option>
+          <option value="Repteis">Répteis</option>
           <option value="Outros">Outros</option>
         </select>
         <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar"class="inputPadrao" required>
-      <button type="submit" class="buttonBrand1">Cadastrar</button>
+      <button type="submit" class="botaoBrand1">Cadastrar</button>
     `
   );
 
@@ -138,7 +138,7 @@ export const modalCadastrarPet = () => {
 
 export const modalAtualizarPerfil = ({ name, avatar_url }) => {
   let formModal = document.createElement("form");
-  formModal.classList = "form-modal modalAtualizar";
+  formModal.classList = "formModal modalAtualizar";
 
   formModal.insertAdjacentHTML(
     "afterbegin",
@@ -147,7 +147,7 @@ export const modalAtualizarPerfil = ({ name, avatar_url }) => {
             <input type="text" value=${name} name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
             <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar"
             class="inputPadrao" required>
-        <button type="submit" class="buttonBrand1">Cadastrar</button>
+        <button type="submit" class="botaoBrand1">Cadastrar</button>
     `)
     
     formModal.addEventListener("submit", async (event) => {
@@ -161,14 +161,14 @@ export const modalAtualizarPerfil = ({ name, avatar_url }) => {
 
 export const modalDeletarPet = (idPet) => {
   let formModal = document.createElement("form");
-  formModal.classList = "form-modal modalDeletar";
+  formModal.classList = "formModal modalDeletar";
 
   formModal.insertAdjacentHTML(
     "afterbegin",
     `
         <h2>Deseja mesmo deletar esse pet?</h2>
-        <button type="button" id="btn-cancelar" class="buttonBrand1 buttonModal">Não desejo deletar esse pet</button>
-        <button type="submit" id="btn-deletar" class="buttonBrand1 buttonModal">Quero deletar esse pet</button>
+        <button type="button" id="btnCancelar" class="botaoBrand1 buttonModal">Não desejo deletar esse pet</button>
+        <button type="submit" id="btnDeletar" class="botaoBrand1 buttonModal">Quero deletar esse pet</button>
     `
   );
 
@@ -179,9 +179,9 @@ export const modalDeletarPet = (idPet) => {
 
   const elements = [...formModal.elements];
   elements.forEach((element) => {
-    if (element.id == "btn-cancelar") {
+    if (element.id == "btnCancelar") {
       element.addEventListener("click", () => {
-        const fundoModal = document.querySelector(".fundo-do-modal");
+        const fundoModal = document.querySelector(".fundoDoModal");
         fundoModal.remove();
       });
     }
@@ -194,14 +194,14 @@ export const modalDeletarPet = (idPet) => {
 export const modalDeletarPerfil = () => {
   const token = recebeLocalStorage();
   let formModal = document.createElement("form");
-  formModal.classList = "form-modal modalDeletar";
+  formModal.classList = "formModal modalDeletar";
 
   formModal.insertAdjacentHTML(
     "afterbegin",
     `
         <h2>Deseja mesmo deletar sua conta?</h2>
-        <button type="button" id="btn-cancelar" class="buttonBrand1 buttonModal">Não desejo deletar minha conta</button>
-        <button type="submit" id="btn-deletar" class="buttonBrand1 buttonModal">Quero deletar minha conta</button>
+        <button type="button" id="btnCancelar" class="botaoBrand1 buttonModal">Não desejo deletar minha conta</button>
+        <button type="submit" id="btnDeletar" class="botaoBrand1 buttonModal">Quero deletar minha conta</button>
     `
   );
 
@@ -212,9 +212,9 @@ export const modalDeletarPerfil = () => {
 
   const elements = [...formModal.elements];
   elements.forEach((element) => {
-    if (element.id == "btn-cancelar") {
+    if (element.id == "btnCancelar") {
       element.addEventListener("click", () => {
-        const fundoModal = document.querySelector(".fundo-do-modal");
+        const fundoModal = document.querySelector(".fundoDoModal");
         fundoModal.remove();
       });
     }
