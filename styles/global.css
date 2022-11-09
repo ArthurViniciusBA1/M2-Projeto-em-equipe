@@ -8,21 +8,21 @@
 
 :root {
     --brand-1: #006270;
-    --brand-2: #b94149;
-    --brand-3: #CC5833;
+    --brand-2: #009394;
     --brand-opaca: #00627033;
-
+    
     --contrast: #B48CF2;
-
+    
     --bg-modal: #878f9777;
     --modal: #D8D8D7;
-
-
+    
+    
     --black: #000000;
     --white-1: #fff;
     --white-2: #FFF8E7;
     --grey-1: #cfcfcf;
     --grey-2: #ececec;
+    --red: #DA566D;
 
     --alert-success: #5bdb77;
 

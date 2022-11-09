@@ -14,19 +14,19 @@ button {
 
 .botaoBrand1 {
     background-color: var(--brand-1);
-    color: var(--white-2);
+    color: var(--white-1);
     border: var(--brand-1) 2px solid;
 }
 
 .botaoBrand1:hover {
-    background-color: var(--white-2);
+    background-color: var(--white-1);
     color: var(--brand-1);
 }
 
 .botaoBrand2 {
-    background-color: var(--white-2);
-    border: 2px solid var(--brand-3);
-    color: var(--brand-3);
+    background-color: var(--white-1);
+    border: 2px solid var(--brand-2);
+    color: var(--brand-2);
 }
 
 .botaoBrand2:hover {
@@ -37,7 +37,7 @@ button {
 
 .botaoDropdown {
     height: 5vh;
-    background-color: var(--white-2);
+    background-color: var(--white-1);
     border-radius: 30px;
     color: var(--brand-1);
     border: none;
@@ -57,15 +57,15 @@ button {
 }
 
 .meAdota {
-    background-color: var(--brand-3);
-    border: 1px solid var(--brand-3);
-    color: var(--white-2);
+    background-color: var(--brand-2);
+    border: 1px solid var(--brand-2);
+    color: var(--white-1);
 }
 
 .adotado {
     background-color: var(--alert-success);
     border: 1px solid var(--alert-success);
-    color: var(--white-2);
+    color: var(--white-1);
 }
 
 .indisponivel {
@@ -75,6 +75,16 @@ button {
 #cadastrarNovoPet{
     width: 100%;
     padding: 10px;
+}
+
+#deletarConta {
+    border: 2px solid var(--red);
+    color: var(--red);
+}
+
+#botaoLogout {
+    border: 2px solid var(--red);
+    color: var(--red);
 }
 
 

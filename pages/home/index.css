@@ -56,7 +56,7 @@ main {
     min-width: 235px;
     max-width: 235px;
     min-height:320px ;
-    background-color: var(--white-2);
+    background-color: var(--white-1);
     box-shadow: 0px 0px 18px -5px var(--brand-1);
     position: relative;
 }
@@ -115,6 +115,10 @@ footer p {
     color: var(--brand-1);
 }
 
+#logout {
+    border: 2px solid var(--red);
+    color: var(--red);
+}
 
 @media (min-width: 769px) {
     header {
@@ -175,7 +179,6 @@ footer p {
         flex-direction: column;
         min-width: 280px;
         max-width: 280px;
-        background-color: var(--white-2);
         box-shadow: 0px 0px 18px -5px var(--brand-1);
     }
 
