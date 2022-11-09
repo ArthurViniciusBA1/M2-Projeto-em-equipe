@@ -36,11 +36,24 @@ button {
 }
 
 .botaoDropdown {
-    height: 5vh;
+    width: 32px;
+    height: 32px;
     background-color: var(--white-1);
-    border-radius: 30px;
+    border-radius: 50%;
     color: var(--brand-1);
     border: none;
+    font-size: 30px;
+}
+
+.fecharMenu{
+    background-image: url('../assets/img/fecharBotao.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
 }
 
 .botaoAdocao {

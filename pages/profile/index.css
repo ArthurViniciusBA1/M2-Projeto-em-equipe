@@ -151,7 +151,6 @@ section {
     display: flex;
     gap: 30px;
     flex-direction: column;
-    background-color: var(--modal);
     flex-wrap: wrap;
     align-items: center;
     margin: 30px 0;
