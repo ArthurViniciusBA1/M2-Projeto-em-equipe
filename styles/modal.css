@@ -74,7 +74,6 @@
 }
 
 .bgModal button {
-    color: var(--white-1);
     min-width: 300px;
     max-width: 343px;
 }
@@ -92,11 +91,6 @@
     font-size: var(--font-size-text1);
 }
 
-#btnDeletar{
-    background-color: var(--white-1);
-    border: 2px solid var(--red);
-    color: var(--red);
-}
 
 .bgModal h2{
     font-size: 20px;

@@ -122,11 +122,11 @@ footer p {
 @media (min-width: 769px) {
     header {
         height: 9vh;
-        padding: 1vh 5vw;
+        padding: 1vh 2vw;
     }
 
     header img {
-        height: 60%;
+        height: 30px;
     }
 
     .menuNavegacao{
@@ -189,7 +189,6 @@ footer p {
 
     .fotoPet {
         border-radius: 8px 8px 0 0;
-        background-color: rgb(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue);
         height: 235px;
     }
 

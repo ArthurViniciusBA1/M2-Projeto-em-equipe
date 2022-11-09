@@ -167,7 +167,7 @@ export const modalDeletarPet = (idPet) => {
     `
         <h2>Deseja mesmo deletar esse pet?</h2>
         <button type="button" id="btnCancelar" class="botaoBrand1 buttonModal">Não desejo deletar esse pet</button>
-        <button type="submit" id="btnDeletar" class="botaoBrand1 buttonModal">Quero deletar esse pet</button>
+        <button type="submit" id="btnDeletar" class="botaoBrand2 buttonModal">Quero deletar esse pet</button>
     `
   );
 
@@ -200,7 +200,7 @@ export const modalDeletarPerfil = () => {
     `
         <h2>Deseja mesmo deletar sua conta?</h2>
         <button type="button" id="btnCancelar" class="botaoBrand1 buttonModal">Não desejo deletar minha conta</button>
-        <button type="submit" id="btnDeletar" class="botaoBrand1 buttonModal">Quero deletar minha conta</button>
+        <button type="submit" id="btnDeletar" class="botaoBrand2 buttonModal">Quero deletar minha conta</button>
     `
   );
 
