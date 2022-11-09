@@ -12,7 +12,7 @@ header {
     gap: 30vw;
 }
 
-.noShow {
+.naoAparecer {
     display: none;
 }
 
@@ -117,7 +117,7 @@ footer p {
         height: 80%;
     }
     
-    .noShow {
+    .naoAparecer {
         display: flex;
     }
     
