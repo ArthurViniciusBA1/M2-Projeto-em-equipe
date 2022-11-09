@@ -105,7 +105,6 @@ function criaCardPetProfile(pet) {
     botaoDeletar.classList.add('buttonBrand1')
 
     botaoAtualizar.id = "btnAtualizar";
-    botaoDeletar.id = "btnDeletar";
 
     nome.innerText = `Nome: ${pet.name}`;
     especie.innerText = `Espécie: ${pet.species}`;
@@ -115,19 +114,18 @@ function criaCardPetProfile(pet) {
     } else {
         adotavel.innerText = 'Adotável: Não'
     }
-    
-    fotoPet.src = pet.avatar_url;
-    fotoPet.alt = `Foto do ${pet.name} (${pet.species})`;
 
-    checkImagem(pet, figure)
+    checkImagem(pet, fotoPet)
 
 
     botaoAtualizar.innerText = 'Atualizar'
+    botaoAtualizar.classList.add('botaoBrand1')
     botaoAtualizar.addEventListener('click', () => {
         abrirModal(modalAtualizarPet(pet))
     })
 
     botaoDeletar.innerText = 'Deletar'
+    botaoDeletar.classList.add('botaoBrand2')
     botaoDeletar.addEventListener('click', () => {
         abrirModal(modalDeletarPet(pet.id))
     })
