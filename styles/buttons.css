@@ -35,15 +35,10 @@ button {
     color: var(--white-1);
 }
 
-.buttonDropdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.botaoDropdown {
     height: 5vh;
     background-color: var(--white-2);
     border-radius: 30px;
-    font-weight: 600;
-    font-size: 1rem;
     color: var(--brand-1);
     border: none;
 }
@@ -89,7 +84,7 @@ button {
         padding: 0.8vh 2vw;
     }
 
-    .buttonDropdown {
+    .botaoDropdown {
         display: none;
     }
 }
