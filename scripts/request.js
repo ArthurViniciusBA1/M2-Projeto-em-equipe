@@ -109,12 +109,11 @@ export async function adotaPet(body) {
         method: "POST",
         headers: {
           "Content-type": "application/json",
-          Authorization: `Bearer ${JSON.parse(token)}`,
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(body),
       }
     );
-
     await adotar.json();
 
     window.location.reload();
