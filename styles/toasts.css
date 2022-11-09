@@ -1,19 +1,16 @@
 .toast {
     display: flex;
     align-items: center;
-
     height: fit-content;
     width: 200px;
-
     border-radius: 20px;
-
     background-color: var(--grey-1-70);
-
+    backdrop-filter: blur(10px);
     position: fixed;
     bottom: 20px;
     right: 10px;
-
-    /* animation: toast 3s; */
+    z-index: 3;
+    animation: toast 3s;
 }
 
 .toast>.borda {

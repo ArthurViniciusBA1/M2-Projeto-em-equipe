@@ -16,12 +16,16 @@ export async function cadastroUsuario(usuario) {
     });
 
     let novoUsuarioJson = await novoUsuario.json();
-
-    fecharModal(novoUsuario.ok);
+    if (novoUsuarioJson.message) {
+      toast(novoUsuarioJson.message, "erro");
+    } else {
+      fecharModal(novoUsuario.ok);
+      toast("Usuário criado com sucesso", "sucesso")
+    }
 
     return novoUsuarioJson;
   } catch (err) {
-    console.log(err);
+   toast(err, "erro");
   }
 }
 
@@ -41,10 +45,10 @@ export async function login(usuario) {
 
       return loginJson;
     } else {
-      return loginJson.message;
+      return toast(loginJson.message, "erro");
     }
   } catch (err) {
-    console.log(err);
+    toast(err, "erro");
   }
 }
 
@@ -61,7 +65,7 @@ export async function meuPerfil() {
 
     return infoJson;
   } catch (err) {
-    console.log(err);
+    toast(err, "erro");
   }
 }
 
@@ -78,7 +82,7 @@ export async function todosPets() {
 
     return petsJson;
   } catch (err) {
-    console.log(err);
+    toast(err, "erro");
   }
 }
 
@@ -95,7 +99,7 @@ export async function meusPets() {
 
     return petsJson;
   } catch (err) {
-    console.log(err);
+    toast(err, "erro");
   }
 }
 
@@ -115,13 +119,12 @@ export async function adotaPet(body) {
     );
     if (adotar.ok) {
       await adotar.json();
-
       window.location.reload();
     } else {
       toast("Este pet já foi adotado, escolha outro", "erro");
     }
   } catch (err) {
-    console.log(err);
+    toast(err, "erro");
   }
 }
 
@@ -142,7 +145,7 @@ export async function meusPetParaAdocao() {
 
     return adotados;
   } catch (err) {
-    console.log(err);
+    toast(err, "erro");
   }
 }
 
@@ -160,12 +163,18 @@ export async function atualizarPerfil(body) {
         body: JSON.stringify(body),
       }
     );
+    
+    let atualizaJson = await atualiza.json();
+    if (atualiza.ok) {
+      window.location.reload()
+    } else if (atualizaJson.message){
+      toast(atualizaJson.message, "erro")
+    } else {
+      toast(atualizaJson.status, "erro")
+    }
 
-    await atualiza.json();
-
-    window.location.reload();
   } catch (err) {
-    console.log(err);
+    (err);
   }
 }
 
@@ -182,13 +191,17 @@ export async function deletarPerfil() {
       }
     );
 
-    await deleta.json();
+    let deletaJson = await deleta.json();
 
-    localStorage.removeItem("token");
+    if (deletaJson.response) {
+      toast(deletaJson.message, "erro")
+    } else {
+      localStorage.removeItem("token");
+      window.location.replace("../../index.html");
+    }
 
-    window.location.replace("../../index.html");
   } catch (err) {
-    console.log(err);
+    toast(err, "erro");
   }
 }
 
@@ -206,11 +219,16 @@ export async function cadastrarPet(body) {
         body: JSON.stringify(body),
       }
     );
-    await cadastraPet.json();
+      let cadastraPetJson = await cadastraPet.json();
 
-    window.location.reload();
+      if (cadastraPet.status == 400){
+        toast(cadastraPetJson.message, "erro")
+      } else {
+        window.location.reload();
+      }
+
   } catch (err) {
-    console.log(err);
+    toast(err, "erro");
   }
 }
 
@@ -231,11 +249,15 @@ export async function atualizarPet(body, idPet) {
 
     let alterado = await atualizaPet.json();
 
-    window.location.reload();
+    if (atualizaPet.ok) {
+      window.location.reload();
+    } else {
+      toast(alterado.message, "erro")
+    }
 
     return alterado;
   } catch (err) {
-    console.log(err);
+    toast(err, "erro");
   }
 }
 
@@ -252,10 +274,16 @@ export async function deletarPet(idPet) {
       }
     );
 
-    await deletaPet.json();
+    let deletado = await deletaPet.json();
+    console.log(deletado)
 
-    window.location.reload();
+    if (deletado.response) {
+      toast(deletado.message, "erro")
+    } else {
+      toast(deletado.message, "sucesso")
+      window.location.reload();
+    }
   } catch (err) {
-    console.log(err);
+    toast(err, "erro");
   }
 }

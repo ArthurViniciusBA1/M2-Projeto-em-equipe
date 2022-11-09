@@ -34,7 +34,7 @@ function toast(message, status) {
     borda.classList = "borda"
     conteudo.classList = "conteudo"
 
-    p.innerText = message
+    p.innerText = message.charAt(0).toUpperCase() + message.slice(1)
 
     conteudo.append(toastHead, p)
     toast.append(borda,conteudo)
