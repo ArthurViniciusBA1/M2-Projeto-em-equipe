@@ -72,16 +72,15 @@
 }
 
 .fechar-modal {
-    width: 32px;
-    height: 32px;
-    border: 2px solid var(--modal);
-    color: var(--modal);
-    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-image: url('../assets/img/close.svg');
+    background-position: center;
     background-color: var(--brand-100);
     cursor: pointer;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 7px;
+    right: 13px;
     font-size: var(--font-size-text1);
 }
 

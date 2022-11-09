@@ -1,6 +1,6 @@
 import { receberForm } from "./inputs.js"
 import { recebeLocalStorage } from "./localStorage.js";
-import { cadastroUsuario, atualizarPerfil, cadastrarPet, atualizarPet, deletarPet } from "./request.js"
+import { cadastroUsuario, atualizarPerfil, cadastrarPet, atualizarPet, deletarPet, deletarPerfil } from "./request.js"
 
 const body = document.querySelector("body");
 
@@ -16,8 +16,6 @@ export const abrirModal = (children) => {
 
   const btnFechar = document.createElement("button");
   btnFechar.classList.add("fechar-modal");
-
-  btnFechar.innerText = "X";
 
   btnFechar.addEventListener("click", () => {
     fundoDoModal.remove();
@@ -48,7 +46,7 @@ export const modalCadastrar = () => {
     "afterbegin",
     `
         <h2>Cadastrar</h2>
-            <input type="text" name="nome" id="name" placeholder="Nome" class="input-padrao" required>
+            <input type="text" name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
             <input type="email" name="email" id="email" placeholder="E-mail" class="input-padrao" required>
             <input type="password" name="senha" id="password" placeholder="Senha" class="input-padrao" required>
             <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar"
@@ -84,14 +82,14 @@ export const modalAtualizarPet = ({name, bread, species, avatar_url, id}) => {
     "afterbegin",
     `
     <h2>Atualizar pet</h2>
-    <label for="nome">Nome</label>
-    <input type="avatar" value=${name} name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
-    <label for="bread">Raça</label>
-    <input type="text" value=${bread} name="bread" id="bread" placeholder="Raça" class="inputPadrao" required>
-    <label for="especie">Espécie</label>
-    <input type="text" value=${species} name="especie" id="species" placeholder="Espécie" class="inputPadrao" required>
-    <label for="avatar">Avatar</label>
-    <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar" class="inputPadrao" required>
+      <label for="nome">Nome</label>
+        <input type="avatar" value=${name} name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
+      <label for="bread">Raça</label>
+        <input type="text" value=${bread} name="bread" id="bread" placeholder="Raça" class="inputPadrao" required>
+      <label for="especie">Espécie</label>
+        <input type="text" value=${species} name="especie" id="species" placeholder="Espécie" class="inputPadrao" required>
+      <label for="avatar">Avatar</label>
+        <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar" class="inputPadrao" required>
     <button type="submit" class="buttonBrand1">Atualizar</button>
     `
   );
@@ -107,18 +105,17 @@ export const modalAtualizarPet = ({name, bread, species, avatar_url, id}) => {
 
 export const modalCadastrarPet = () => {
   let formModal = document.createElement("form");
-  formModal.classList.add("form-modal");
+  formModal.classList = "form-modal modalAtualizar";
 
   formModal.insertAdjacentHTML(
     "afterbegin",
     `
-    <h2>Cadastrar pet</h2>
-            <input type="text" name="nome" id="name" placeholder="Nome" class="input-padrao" required>
-            <input type="text" name="bread" id="bread" placeholder="Raça" class="input-padrao" required>
-            <input type="text" name="species" id="species" placeholder="Espécie" class="input-padrao" required>
-            <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar"
-            class="input-padrao" required>
-        <button type="submit" class="buttonBrand1">Cadastrar</button>
+      <h2>Cadastrar pet</h2>
+        <input type="text" name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
+        <input type="text" name="bread" id="bread" placeholder="Raça" class="inputPadrao" required>
+        <input type="text" name="species" id="species" placeholder="Espécie" class="inputPadrao" required>
+        <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar"class="inputPadrao" required>
+      <button type="submit" class="buttonBrand1">Cadastrar</button>
     `
   );
 
@@ -133,15 +130,15 @@ export const modalCadastrarPet = () => {
 
 export const modalAtualizarPerfil = ({ name, avatar_url }) => {
   let formModal = document.createElement("form");
-  formModal.classList.add("form-modal");
+  formModal.classList = "form-modal modalAtualizar";
 
   formModal.insertAdjacentHTML(
     "afterbegin",
     `
         <h2>Atualizar perfil</h2>
-            <input type="text" value=${name} name="nome" id="name" placeholder="Nome" class="input-padrao" required>
+            <input type="text" value=${name} name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
             <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar"
-            class="input-padrao" required>
+            class="inputPadrao" required>
         <button type="submit" class="buttonBrand1">Cadastrar</button>
     `)
     

@@ -131,10 +131,10 @@ function criaCardPetProfile(pet) {
 async function renderizaCardPetProfile() {
     const ul = document.querySelector('.listaDePets')
 
-    let testpet = await filtrarPetsCriados()
-
-    if (testpet !== undefined) {
-        testpet.forEach(element => {
+    let arrPet = await filtrarPetsCriados()
+   
+    if (arrPet.length !== 0) {
+        arrPet.forEach(element => {
             ul.append(criaCardPetProfile(element))
         })
     }
@@ -184,6 +184,8 @@ async function filtrarPetsCriados() {
 
     return todosPetParaAdotar
 }
+
+
 
 filtrarPetsCriados()
 botaoHomeEvent();
