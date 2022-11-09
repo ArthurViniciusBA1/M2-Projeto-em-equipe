@@ -277,7 +277,6 @@ export async function deletarPet(idPet) {
     );
 
     let deletado = await deletaPet.json();
-    console.log(deletado)
 
     if (deletado.response) {
       toast(deletado.message, "erro")
