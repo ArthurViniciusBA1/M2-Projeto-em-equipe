@@ -12,7 +12,16 @@ async function renderizaCardsPets() {
   const listaPetsHtml = document.querySelector(".listaPets");
   const listaPets = await todosPets();
   const infoUsuario = await meuPerfil(JSON.parse(token));
-  listaPets.forEach((pet) => criaCard(pet, infoUsuario.id, listaPetsHtml));
+  
+  listaPets.forEach((pet) => {
+    if (pet.available_for_adoption) {
+      criaCard(pet, infoUsuario.id, listaPetsHtml)
+    } else {
+      if (pet.guardian.id == infoUsuario.id) {
+        criaCard(pet, infoUsuario.id, listaPetsHtml)
+      }
+    }
+  });
 }
 
 function criaCard(pet, idUsuario, listaHtml) {
@@ -51,10 +60,6 @@ function criaCard(pet, idUsuario, listaHtml) {
     if (pet.guardian.id == idUsuario) {
       botaoAdotar.innerText = "Já adotou";
       botaoAdotar.classList = "botaoAdocao adotado";
-      botaoAdotar.setAttribute("disabled", true);
-    } else {
-      botaoAdotar.innerText = "Indisponível";
-      botaoAdotar.classList = "botaoAdocao indisponivel";
       botaoAdotar.setAttribute("disabled", true);
     }
   }
