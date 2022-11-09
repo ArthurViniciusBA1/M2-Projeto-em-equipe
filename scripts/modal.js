@@ -143,7 +143,7 @@ export const modalAtualizarPerfil = ({ name, avatar_url }) => {
     "afterbegin",
     `
         <h2>Atualizar perfil</h2>
-            <input type="text" value=${name} name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
+            <input type="text" value="${name}" name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
             <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar"
             class="inputPadrao" required>
         <button type="submit" class="botaoBrand1">Atualizar</button>
