@@ -1,6 +1,6 @@
 import { receberForm } from "./inputs.js"
 import { recebeLocalStorage } from "./localStorage.js";
-import { cadastroUsuario, atualizarPerfil, cadastrarPet, atualizarPet } from "./request.js"
+import { cadastroUsuario, atualizarPerfil, cadastrarPet, atualizarPet, deletarPet } from "./request.js"
 
 const body = document.querySelector("body");
 
@@ -105,7 +105,6 @@ export const modalAtualizarPet = ({name, bread, species, avatar_url, id}) => {
   return formModal;
 };
 
-
 export const modalCadastrarPet = () => {
   let formModal = document.createElement("form");
   formModal.classList.add("form-modal");
@@ -155,10 +154,42 @@ export const modalAtualizarPerfil = ({ name, avatar_url }) => {
     return formModal
 }
 
+export const modalDeletarPet = (idPet) => {
+  let formModal = document.createElement("form");
+  formModal.classList = "form-modal modalDeletar";
+
+  formModal.insertAdjacentHTML(
+    "afterbegin",
+    `
+        <h2>Deseja mesmo deletar esse pet?</h2>
+        <button type="button" id="btn-cancelar" class="buttonBrand1 buttonModal">Não desejo deletar esse pet</button>
+        <button type="submit" id="btn-deletar" class="buttonBrand1 buttonModal">Quero deletar esse pet</button>
+    `
+  );
+
+  formModal.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    await deletarPet(idPet);
+  });
+
+  const elements = [...formModal.elements];
+  elements.forEach((element) => {
+    if (element.id == "btn-cancelar") {
+      element.addEventListener("click", () => {
+        const fundoModal = document.querySelector(".fundo-do-modal");
+        fundoModal.remove();
+      });
+    }
+  });
+
+  return formModal;
+};
+
+
 export const modalDeletarPerfil = () => {
   const token = recebeLocalStorage();
   let formModal = document.createElement("form");
-  formModal.classList.add("form-modal");
+  formModal.classList = "form-modal modalDeletar";
 
   formModal.insertAdjacentHTML(
     "afterbegin",

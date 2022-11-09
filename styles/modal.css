@@ -32,6 +32,11 @@
     margin-bottom: 5px;
 }
 
+.modalDeletar{
+    display: flex;
+    gap: 10px;
+}
+
 .modalAtualizar button{
     margin-top: 20px;
     width: 300px;
@@ -39,7 +44,7 @@
 
 .modal{
     background-color: var(--brand-1);
-    width: 100%;
+    width: 95%;
     max-width: 520px;
     display: flex;
     align-items: center;
@@ -58,12 +63,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.bg-modal h2{
-    font-size: 32px;
-    color: var(--brand-1);
-    font-weight: 700;
 }
 
 .bg-modal button {
@@ -92,7 +91,7 @@
 }
 
 .bg-modal h2{
-    font-size: 24px;
+    font-size: 20px;
     color: var(--brand-1);
     font-weight: 700;
     margin-bottom: 20px;

@@ -4,8 +4,9 @@ import {
     modalAtualizarPet,
     modalCadastrarPet,
     modalDeletarPerfil,
+    modalDeletarPet,
 } from "../../scripts/modal.js";
-import { meuPerfil, meusPetParaAdocao, meusPets } from "../../scripts/request.js";
+import { deletarPet, meuPerfil, meusPetParaAdocao, meusPets } from "../../scripts/request.js";
 
 
 const token = JSON.parse(localStorage.getItem("token"));
@@ -111,11 +112,14 @@ function criaCardPetProfile(pet) {
 
     botaoAtualizar.innerText = 'Atualizar'
     botaoAtualizar.addEventListener('click', () => {
-       console.log(pet)
         abrirModal(modalAtualizarPet(pet))
     })
 
     botaoDeletar.innerText = 'Deletar'
+    botaoDeletar.addEventListener('click', () => {
+        abrirModal(modalDeletarPet(pet.id))
+    })
+
 
     figure.appendChild(fotoPet)
     divCorpoCard.append(nome, especie, adotavel, botaoAtualizar, botaoDeletar)
