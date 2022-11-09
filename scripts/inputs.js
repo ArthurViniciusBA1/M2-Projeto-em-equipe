@@ -4,7 +4,7 @@ export function receberForm(elementos) {
     let elementosFormulario = [...elementos]
 
     elementosFormulario.forEach((elemento) => {
-        if (elemento.tagName == "INPUT") {
+        if (elemento.tagName == "INPUT" || elemento.tagName == 'SELECT' ) {
             corpoApi[elemento.id] = elemento.value
         }
     })

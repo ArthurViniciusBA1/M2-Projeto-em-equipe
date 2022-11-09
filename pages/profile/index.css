@@ -153,13 +153,15 @@ section {
     width: 100%;
     max-width: 1024px;
     height: max-content;
+    max-height: 860px;
     display: flex;
     gap: 30px;
     flex-direction: column;
     background-color: var( --modal);
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 20px;
+    margin: 30px 0;
+    padding: 10px;
 }
 
 .cardPet2 {
@@ -214,7 +216,7 @@ section {
 }
 
 .caixaVazia>h2{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .botaoDropdown {
@@ -224,6 +226,14 @@ section {
 @media (min-width: 769px) {
     .dadosPessoais>.botoes {
         flex-direction: row;
+    }
+
+    .listaDePets{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: auto;
     }
 
     .naoAparecer {
