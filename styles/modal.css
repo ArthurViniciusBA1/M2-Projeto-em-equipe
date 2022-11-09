@@ -25,6 +25,13 @@
     margin-bottom: 20px;
 }
 
+.modalAtualizar select{
+    width: 300px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    color: gray;
+}
+
 .modalAtualizar label{
     display: flex;
     align-self: start;

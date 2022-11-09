@@ -113,7 +113,14 @@ export const modalCadastrarPet = () => {
       <h2>Cadastrar pet</h2>
         <input type="text" name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
         <input type="text" name="bread" id="bread" placeholder="Raça" class="inputPadrao" required>
-        <input type="text" name="species" id="species" placeholder="Espécie" class="inputPadrao" required>
+        <select name="selecionarRaca" id="species" class="inputPadrao">
+          <option value="selecionarEspecie">Selecionar espécie</option>
+          <option value="Cachorro">Cachorro</option>
+          <option value="Gato">Gato</option>
+          <option value="Aves">Aves</option>
+          <option value="Repiteis">Répiteis</option>
+          <option value="Outros">Outros</option>
+        </select>
         <input type="avatar" name="avatar" id="avatar_url" placeholder="Avatar"class="inputPadrao" required>
       <button type="submit" class="buttonBrand1">Cadastrar</button>
     `
@@ -122,6 +129,7 @@ export const modalCadastrarPet = () => {
   formModal.addEventListener("submit", (event) => {
     event.preventDefault();
     let corpo = receberForm(formModal.elements);
+    console.log(corpo)
     cadastrarPet(corpo);
   });
 
