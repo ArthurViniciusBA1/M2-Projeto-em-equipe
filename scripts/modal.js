@@ -1,6 +1,7 @@
 import { receberForm } from "./inputs.js"
 import { recebeLocalStorage } from "./localStorage.js";
 import { cadastroUsuario, atualizarPerfil, cadastrarPet, atualizarPet, deletarPet, deletarPerfil } from "./request.js"
+import { toast } from "./toast.js";
 
 const body = document.querySelector("body");
 
@@ -70,7 +71,7 @@ export const fecharModal = (request) => {
   if (request) {
     modal.remove();
   } else {
-    console.log("Deu algum erro!");
+    toast('Deu algum erro!', 'erro' )
   }
 };
 
