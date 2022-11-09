@@ -133,7 +133,6 @@ export async function meusPetParaAdocao() {
         'Authorization': `Bearer ${token}`
       },
     })
-
         let adotados = await adotar.json()
 
         return adotados
@@ -190,7 +189,6 @@ export async function deletarPerfil() {
 }
 
 export async function cadastrarPet(body) {
- 
     try {
         let token = recebeLocalStorage()
         let cadastraPet = await fetch('https://m2-api-adot-pet.herokuapp.com/pets', {
