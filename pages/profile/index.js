@@ -1,10 +1,12 @@
 import {
     abrirModal,
     modalAtualizarPerfil,
+    modalAtualizarPet,
     modalCadastrarPet,
     modalDeletarPerfil,
+    modalDeletarPet,
 } from "../../scripts/modal.js";
-import { meuPerfil, meusPetParaAdocao, meusPets } from "../../scripts/request.js";
+import { deletarPet, meuPerfil, meusPetParaAdocao, meusPets } from "../../scripts/request.js";
 
 
 const token = JSON.parse(localStorage.getItem("token"));
@@ -108,9 +110,16 @@ function criaCardPetProfile(pet) {
     fotoPet.src = pet.avatar_url;
     fotoPet.alt = `Foto do ${pet.name} (${pet.species})`;
 
-    botaoAtualizar.innerText = 'Atualziar'
+    botaoAtualizar.innerText = 'Atualizar'
+    botaoAtualizar.addEventListener('click', () => {
+        abrirModal(modalAtualizarPet(pet))
+    })
 
     botaoDeletar.innerText = 'Deletar'
+    botaoDeletar.addEventListener('click', () => {
+        abrirModal(modalDeletarPet(pet.id))
+    })
+
 
     figure.appendChild(fotoPet)
     divCorpoCard.append(nome, especie, adotavel, botaoAtualizar, botaoDeletar)
@@ -122,10 +131,10 @@ function criaCardPetProfile(pet) {
 async function renderizaCardPetProfile() {
     const ul = document.querySelector('.listaDePets')
 
-    let testpet = await filtrarPetsCriados()
-
-    if (testpet !== undefined) {
-        testpet.forEach(element => {
+    let arrPet = await filtrarPetsCriados()
+   
+    if (arrPet.length !== 0) {
+        arrPet.forEach(element => {
             ul.append(criaCardPetProfile(element))
         })
     }
@@ -175,6 +184,8 @@ async function filtrarPetsCriados() {
 
     return todosPetParaAdotar
 }
+
+
 
 filtrarPetsCriados()
 botaoHomeEvent();

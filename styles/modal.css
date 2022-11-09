@@ -14,15 +14,37 @@
 .form-modal{
     display: flex;
     flex-direction: column;
-    width: 95%;
-    gap: 20px;
     align-items: center;
+    width: 90%;
     margin: 20px 0;
+}
+
+.modalAtualizar input{
+    width: 300px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.modalAtualizar label{
+    display: flex;
+    align-self: start;
+    padding-left: 30px;
+    margin-bottom: 5px;
+}
+
+.modalDeletar{
+    display: flex;
+    gap: 10px;
+}
+
+.modalAtualizar button{
+    margin-top: 20px;
+    width: 300px;
 }
 
 .modal{
     background-color: var(--brand-1);
-    width: 100%;
+    width: 95%;
     max-width: 520px;
     display: flex;
     align-items: center;
@@ -43,12 +65,6 @@
     justify-content: center;
 }
 
-.bg-modal h2{
-    font-size: 32px;
-    color: var(--brand-1);
-    font-weight: 700;
-}
-
 .bg-modal button {
     color: var(--modal);
     min-width: 300px;
@@ -56,16 +72,15 @@
 }
 
 .fechar-modal {
-    width: 32px;
-    height: 32px;
-    border: 2px solid var(--modal);
-    color: var(--modal);
-    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-image: url('../assets/img/close.svg');
+    background-position: center;
     background-color: var(--brand-100);
     cursor: pointer;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 7px;
+    right: 13px;
     font-size: var(--font-size-text1);
 }
 
@@ -75,7 +90,7 @@
 }
 
 .bg-modal h2{
-    font-size: 24px;
+    font-size: 20px;
     color: var(--brand-1);
     font-weight: 700;
     margin-bottom: 20px;

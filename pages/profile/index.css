@@ -19,14 +19,32 @@ header {
 header>img {
     height: 30px;
 }
-
+/* 
 header>div {
     display: flex;
-    gap: 24px;
-}
+    gap: 10px;
+    
+} */
 
 main {
     width: 100vw;
+}
+
+
+.container{
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.botoes button {
+    width: 300px;
 }
 
 .cabecalho {
@@ -65,10 +83,12 @@ main {
     display: flex;
     flex-direction: column;
     gap: 33px;
-
+    background-color: var(--modal);
+    border: 2px solid var(--white-1);
+    border-radius: 4px;
     margin: 20px auto 0 auto;
-    width: 40%;
-
+    width: 100%;
+    max-width: 480px;
     padding: 24px;
 }
 
@@ -85,7 +105,7 @@ main {
     display: flex;
     flex-direction: column;
 
-    gap: 8px;
+    gap: 10px;
 
     font-weight: 600;
     font-size: 16px;
@@ -111,6 +131,12 @@ section {
     margin: 90px auto 0 auto;
 }
 
+.secaoDePets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .listaDePets {
     width: 100%;
     max-width: 1024px;
@@ -129,15 +155,15 @@ section {
     flex-direction: column;
     width: 280px;
     height: 400px;
-    background-color: var(--white-1);
     gap: 10px;
     border-radius: 4px;
+    box-shadow: 0px 0px 18px -5px var(--brand-1);
 }
 
 .caixaImagem {
     width: 100%;
     height: 180px;
-    border-radius: 4px 4px 0 0;
+    border-radius: 8px 8px 0 0;
 }
 
 .corpoCard {
@@ -159,6 +185,7 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 8px 8px 0 0;
 }
 
 .caixaVazia{
@@ -169,7 +196,7 @@ section {
     height: 200px;
     background-color: var(--white-1);
     border: 1px solid var(--black);
-    margin-bottom: 30px;
+    margin: 30px 0;
     box-shadow: 0px 0px 18px -5px var(--black);
     border-radius: 8px;
 }
