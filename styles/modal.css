@@ -17,6 +17,7 @@
     align-items: center;
     width: 90%;
     margin: 20px 0;
+    gap: 10px;
 }
 
 .modalAtualizar input{
