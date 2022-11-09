@@ -8,12 +8,13 @@
     border-radius: 20px;
 
     background-color: var(--grey-1-70);
+    backdrop-filter: blur(10px);
 
     position: fixed;
     bottom: 20px;
     right: 10px;
 
-    /* animation: toast 3s; */
+    animation: toast 3s;
 }
 
 .toast>.borda {

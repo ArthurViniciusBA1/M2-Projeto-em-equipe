@@ -16,12 +16,16 @@ export async function cadastroUsuario(usuario) {
     });
 
     let novoUsuarioJson = await novoUsuario.json();
-
-    fecharModal(novoUsuario.ok);
+    if (novoUsuarioJson.message) {
+      toast(novoUsuarioJson.message, "erro");
+    } else {
+      fecharModal(novoUsuario.ok);
+      toast("Usuário criado com sucesso", "sucesso")
+    }
 
     return novoUsuarioJson;
   } catch (err) {
-    console.log(err);
+   toast(err, "erro");
   }
 }
 
@@ -41,10 +45,10 @@ export async function login(usuario) {
 
       return loginJson;
     } else {
-      return loginJson.message;
+      return toast(loginJson.message, "erro");
     }
   } catch (err) {
-    console.log(err);
+    toast(err, "erro");
   }
 }
 
