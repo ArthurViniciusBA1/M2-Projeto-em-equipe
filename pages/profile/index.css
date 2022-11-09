@@ -10,7 +10,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 85px;
+    height: 9vh;
     width: 90%;
     margin: 0 auto;
 }
