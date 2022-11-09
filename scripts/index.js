@@ -1,9 +1,20 @@
 import { receberForm } from "./inputs.js"
 import { abrirModal, modalCadastrar } from "./modal.js"
+import { gerarCaminhoAleatorio } from "./randomPets.js"
 import { login, meusPets } from "./request.js"
 
 const formularioLogin = document.querySelector(".formLogin")
 const botaoCadastrar  = document.querySelector(".cadastrar")
+
+function fundoAleatorio(){
+    let div = document.querySelector(".divImagem")
+
+    let petAleatorio = gerarCaminhoAleatorio()
+
+    div.style.backgroundImage = `url(${petAleatorio})`
+}
+
+fundoAleatorio()
 
 formularioLogin.addEventListener("submit", (event) =>{
     event.preventDefault()

@@ -22,7 +22,6 @@ main {
 }
 
 .divImagem {
-    background-image: url('https://random.dog/ec3dd4d0-d666-44e8-bdcf-06b5f103b111.jpg');
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
