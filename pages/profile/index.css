@@ -19,11 +19,12 @@ header {
 header>img {
     height: 30px;
 }
-
+/* 
 header>div {
     display: flex;
-    gap: 24px;
-}
+    gap: 10px;
+    
+} */
 
 main {
     width: 100vw;

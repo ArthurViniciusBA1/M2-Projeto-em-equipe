@@ -14,10 +14,27 @@
 .form-modal{
     display: flex;
     flex-direction: column;
-    width: 95%;
-    gap: 20px;
     align-items: center;
+    width: 90%;
     margin: 20px 0;
+}
+
+.modalAtualizar input{
+    width: 300px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.modalAtualizar label{
+    display: flex;
+    align-self: start;
+    padding-left: 30px;
+    margin-bottom: 5px;
+}
+
+.modalAtualizar button{
+    margin-top: 20px;
+    width: 300px;
 }
 
 .modal{

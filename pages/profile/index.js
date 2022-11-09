@@ -1,6 +1,7 @@
 import {
     abrirModal,
     modalAtualizarPerfil,
+    modalAtualizarPet,
     modalCadastrarPet,
     modalDeletarPerfil,
 } from "../../scripts/modal.js";
@@ -108,7 +109,11 @@ function criaCardPetProfile(pet) {
     fotoPet.src = pet.avatar_url;
     fotoPet.alt = `Foto do ${pet.name} (${pet.species})`;
 
-    botaoAtualizar.innerText = 'Atualziar'
+    botaoAtualizar.innerText = 'Atualizar'
+    botaoAtualizar.addEventListener('click', () => {
+       console.log(pet)
+        abrirModal(modalAtualizarPet(pet))
+    })
 
     botaoDeletar.innerText = 'Deletar'
 

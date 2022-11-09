@@ -199,23 +199,27 @@ export async function cadastrarPet(body) {
   }
 }
 
-export async function atualizarPet(token, body, idPet) {
+export async function atualizarPet(body, idPet) {
   try {
+    let token = recebeLocalStorage() 
+    console.log(token)
     let atualizaPet = await fetch(
-      `https://m2-api-adot-pet.herokuapp.com/users/profhttps://m2-api-adot-pet.herokuapp.com/pets/${idPet}`,
+      `https://m2-api-adot-pet.herokuapp.com/pets/${idPet}`,
       {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${JSON.parse(token)}`,
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(body),
       }
     );
 
-    await atualizaPet.json();
+    let alterado = await atualizaPet.json();
 
     window.location.reload();
+
+    return alterado
   } catch (err) {
     console.log(err);
   }

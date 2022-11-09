@@ -1,6 +1,6 @@
 import { receberForm } from "./inputs.js"
 import { recebeLocalStorage } from "./localStorage.js";
-import { cadastroUsuario, atualizarPerfil, cadastrarPet } from "./request.js"
+import { cadastroUsuario, atualizarPerfil, cadastrarPet, atualizarPet } from "./request.js"
 
 const body = document.querySelector("body");
 
@@ -76,18 +76,22 @@ export const fecharModal = (request) => {
   }
 };
 
-export const modalAtualizarPet = () => {
+export const modalAtualizarPet = ({name, bread, species, avatar_url, id}) => {
   let formModal = document.createElement("form");
-  formModal.classList.add("form-modal");
+  formModal.classList = "form-modal modalAtualizar";
 
   formModal.insertAdjacentHTML(
     "afterbegin",
     `
     <h2>Atualizar pet</h2>
-    <input type="avatar" value=${name} name="nome" id="name" placeholder="Nome" class="input-padrao" required>
-    <input type="text" value=${bread} name="bread" id="bread" placeholder="Raça" class="input-padrao" required>
-    <input type="text" value=${species} name="especie" id="species" placeholder="Espécie" class="input-padrao" required>
-    <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar" class="input-padrao" required>
+    <label for="nome">Nome</label>
+    <input type="avatar" value=${name} name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
+    <label for="bread">Raça</label>
+    <input type="text" value=${bread} name="bread" id="bread" placeholder="Raça" class="inputPadrao" required>
+    <label for="especie">Espécie</label>
+    <input type="text" value=${species} name="especie" id="species" placeholder="Espécie" class="inputPadrao" required>
+    <label for="avatar">Avatar</label>
+    <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar" class="inputPadrao" required>
     <button type="submit" class="buttonBrand1">Atualizar</button>
     `
   );
@@ -95,11 +99,13 @@ export const modalAtualizarPet = () => {
   formModal.addEventListener("submit", (event) => {
     event.preventDefault();
     let corpo = receberForm(formModal.elements);
-    atualizarPet(corpo);
+    atualizarPet(corpo, id);
   });
 
   return formModal;
 };
+
+
 export const modalCadastrarPet = () => {
   let formModal = document.createElement("form");
   formModal.classList.add("form-modal");
