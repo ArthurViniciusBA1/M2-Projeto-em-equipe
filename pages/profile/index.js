@@ -17,6 +17,10 @@ const imagemPerfil = document.querySelector(".cabecalho img");
 const botaoDrop = document.querySelector(".botaoDropdown");
 const botoes = document.querySelector("header div");
 
+if (!token) {
+    window.location.href = "../../"
+}
+
 botaoDrop.addEventListener("click", () => {
     botoes.classList.toggle("naoAparecer");
 });

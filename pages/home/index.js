@@ -5,6 +5,10 @@ const token = localStorage.getItem("token");
 const botaoDrop = document.querySelector(".botaoDropdown");
 const navegacao = document.querySelector("nav");
 
+if (!token) {
+  window.location.href = "../../"
+}
+
 botaoDrop.addEventListener("click", () => {
   navegacao.classList.toggle("naoAparecer");
   botaoDrop.classList.toggle('fecharMenu')
