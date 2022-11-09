@@ -20,6 +20,7 @@
     gap: 10px;
 }
 
+
 .modalAtualizar input{
     width: 300px;
     max-width: 100%;
@@ -36,7 +37,7 @@
 .modalAtualizar label{
     display: flex;
     align-self: start;
-    padding-left: 30px;
+    padding-left: 100px;
     margin-bottom: 5px;
 }
 
