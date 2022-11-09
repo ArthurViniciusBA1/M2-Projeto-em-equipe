@@ -223,7 +223,7 @@ export async function cadastrarPet(body) {
     );
       let cadastraPetJson = await cadastraPet.json();
 
-      if (cadastraPet.status == 400){
+      if (cadastraPet.status != 200){
         toast(cadastraPetJson.message, "erro")
       } else {
         window.location.reload();
