@@ -181,9 +181,18 @@ section {
     padding: 10px;
 }
 
-.corpoCard #btn-atualizar{
-    margin-top: 10px;
+.corpoCard #btnAtualizar {
+    background-color: var(--brand-1);
+    color: var(--white-1);
+    border: var(--brand-1) 2px solid;
 }
+
+.corpoCard #btnDeletar {
+    background-color: var(--white-1);
+    color: var(--red);
+    border: var(--red) 2px solid;
+}
+
 
 .bgImg {
     width: 100%;
