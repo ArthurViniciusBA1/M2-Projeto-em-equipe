@@ -54,7 +54,7 @@ function criaCard(pet, idUsuario, listaHtml) {
     botaoAdotar.innerText = "Me adota?";
     botaoAdotar.classList = "botaoAdocao meAdota";
     botaoAdotar.addEventListener("click", () => {
-      adotaPet(token, bodyDoRequest);
+      adotaPet(bodyDoRequest);
     });
   } else {
     if (pet.guardian.id == idUsuario) {
