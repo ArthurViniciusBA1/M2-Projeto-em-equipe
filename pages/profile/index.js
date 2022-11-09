@@ -104,8 +104,8 @@ function criaCardPetProfile(pet) {
     botaoAtualizar.classList.add('buttonBrand1')
     botaoDeletar.classList.add('buttonBrand1')
 
-    botaoAtualizar.id = "btn-atualizar";
-    botaoDeletar.id = "btn-deletar";
+    botaoAtualizar.id = "btnAtualizar";
+    botaoDeletar.id = "btnDeletar";
 
     nome.innerText = `Nome: ${pet.name}`;
     especie.innerText = `Espécie: ${pet.species}`;
