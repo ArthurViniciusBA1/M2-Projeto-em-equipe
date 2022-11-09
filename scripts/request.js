@@ -1,3 +1,4 @@
+import { toNamespacedPath } from "path";
 import { recebeLocalStorage } from "./localStorage.js";
 import { fecharModal } from "./modal.js";
 
@@ -111,9 +112,13 @@ export async function adotaPet(token, body) {
       }
     );
 
-    await adotar.json();
+    if (adotar.ok) {
+      await adotar.json();
 
-    window.location.reload();
+      window.location.reload();
+    } else {
+      toast('Este pet já foi adotado, escolha outro', 'erro')
+    }
   } catch (err) {
     console.log(err);
   }
