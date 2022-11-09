@@ -1,4 +1,3 @@
-import { toNamespacedPath } from "path";
 import { recebeLocalStorage } from "./localStorage.js";
 import { fecharModal } from "./modal.js";
 
