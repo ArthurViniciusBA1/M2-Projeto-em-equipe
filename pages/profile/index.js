@@ -115,11 +115,12 @@ function criaCardPetProfile(pet) {
     } else {
         adotavel.innerText = 'Adotável: Não'
     }
+    
+    fotoPet.src = pet.avatar_url;
+    fotoPet.alt = `Foto do ${pet.name} (${pet.species})`;
 
     checkImagem(pet, figure)
 
-    fotoPet.src = pet.avatar_url;
-    fotoPet.alt = `Foto do ${pet.name} (${pet.species})`;
 
     botaoAtualizar.innerText = 'Atualizar'
     botaoAtualizar.addEventListener('click', () => {

@@ -25,15 +25,16 @@ button {
 
 .botaoBrand2 {
     background-color: var(--white-1);
-    border: 2px solid var(--brand-2);
-    color: var(--brand-2);
+    border: 2px solid var(--red);
+    color: var(--red);
 }
 
 .botaoBrand2:hover {
-    background-color: var(--brand-2);
-    border-color: var(--brand-2);
+    background-color: var(--red);
+    border-color: var(--white-1);
     color: var(--white-1);
 }
+
 
 .botaoDropdown {
     width: 32px;

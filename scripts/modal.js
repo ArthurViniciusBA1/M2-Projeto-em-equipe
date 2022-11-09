@@ -147,7 +147,7 @@ export const modalAtualizarPerfil = ({ name, avatar_url }) => {
             <input type="text" value=${name} name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
             <input type="avatar" value=${avatar_url} name="avatar" id="avatar_url" placeholder="Avatar"
             class="inputPadrao" required>
-        <button type="submit" class="botaoBrand1">Cadastrar</button>
+        <button type="submit" class="botaoBrand1">Atualizar</button>
     `)
     
     formModal.addEventListener("submit", async (event) => {
