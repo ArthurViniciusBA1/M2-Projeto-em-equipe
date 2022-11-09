@@ -19,6 +19,7 @@ header {
 
 nav {
     background-color: var(--brand-opaca);
+    backdrop-filter: blur(2px);
     padding: 1vh;
     border-bottom: 1px solid var(--brand-1);
     position: absolute;
