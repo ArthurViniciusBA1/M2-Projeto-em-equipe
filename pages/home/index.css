@@ -35,7 +35,6 @@ main {
 
 .listaPets {
     display: flex;
-    flex-direction: column;
     gap: 8vw;
     align-items: center;
     width: 90%;

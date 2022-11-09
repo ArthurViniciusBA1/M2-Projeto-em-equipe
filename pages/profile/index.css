@@ -19,12 +19,6 @@ header {
 header>img {
     height: 30px;
 }
-/* 
-header>div {
-    display: flex;
-    gap: 10px;
-    
-} */
 
 main {
     width: 100vw;
@@ -44,7 +38,7 @@ main {
     align-items: center;
 }
 .botoes button {
-    width: 300px;
+    width: 100%;
 }
 
 .cabecalho {
