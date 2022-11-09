@@ -214,6 +214,10 @@ section {
     background-color: inherit;
 }
 
+.corpoCard span {
+    font-weight: bold;
+}
+
 @media (min-width: 769px) {
     .dadosPessoais>.botoes {
         flex-direction: row;

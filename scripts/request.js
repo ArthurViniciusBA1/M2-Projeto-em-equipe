@@ -197,7 +197,9 @@ export async function deletarPerfil() {
       toast(deletaJson.message, "erro")
     } else {
       localStorage.removeItem("token");
+  
       window.location.replace("../../index.html");
+
     }
 
   } catch (err) {
