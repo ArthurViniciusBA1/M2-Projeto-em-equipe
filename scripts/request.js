@@ -39,7 +39,7 @@ export async function login(usuario) {
       window.location.replace("../pages/home/index.html");
 
       return loginJson;
-      
+
     } else {
       return loginJson.message
     }
@@ -49,8 +49,9 @@ export async function login(usuario) {
   }
 }
 
-export async function meuPerfil(token) {
+export async function meuPerfil() {
   try {
+    let token = recebeLocalStorage()
     let infoPessoal = await fetch(`${urlBase}/users/profile`, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -65,8 +66,9 @@ export async function meuPerfil(token) {
   }
 }
 
-export async function todosPets(token) {
+export async function todosPets() {
   try {
+    let token = recebeLocalStorage()
     let pets = await fetch(`${urlBase}/pets`, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -81,8 +83,9 @@ export async function todosPets(token) {
   }
 }
 
-export async function meusPets(token) {
+export async function meusPets() {
   try {
+    let token = recebeLocalStorage()
     let pets = await fetch(`${urlBase}/pets/my_pets`, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -97,8 +100,9 @@ export async function meusPets(token) {
   }
 }
 
-export async function adotaPet(token, body) {
+export async function adotaPet(body) {
   try {
+    let token = recebeLocalStorage()
     let adotar = await fetch(
       "https://m2-api-adot-pet.herokuapp.com/adoptions",
       {
@@ -119,9 +123,9 @@ export async function adotaPet(token, body) {
   }
 }
 
-export async function meusPetParaAdocao(token) {
+export async function meusPetParaAdocao() {
   try {
-    
+    let token = recebeLocalStorage()
     let adotar = await fetch('https://m2-api-adot-pet.herokuapp.com/adoptions/myAdoptions', {
       method: "GET",
       headers: {
@@ -129,7 +133,6 @@ export async function meusPetParaAdocao(token) {
         'Authorization': `Bearer ${token}`
       },
     })
-
         let adotados = await adotar.json()
 
         return adotados
@@ -162,8 +165,9 @@ export async function atualizarPerfil(body) {
   }
 }
 
-export async function deletarPerfil(token) {
+export async function deletarPerfil() {
   try {
+    let token = recebeLocalStorage()
     let deleta = await fetch(
       "https://m2-api-adot-pet.herokuapp.com/users/profile",
       {
@@ -185,7 +189,6 @@ export async function deletarPerfil(token) {
 }
 
 export async function cadastrarPet(body) {
- 
     try {
         let token = recebeLocalStorage()
         let cadastraPet = await fetch('https://m2-api-adot-pet.herokuapp.com/pets', {
