@@ -106,13 +106,13 @@ function criaCardPetProfile(pet) {
 
     botaoAtualizar.id = "btnAtualizar";
 
-    nome.innerText = `Nome: ${pet.name}`;
-    especie.innerText = `Espécie: ${pet.species}`;
+    nome.insertAdjacentHTML("afterbegin",`<span>Nome: </span>${pet.name}`);
+    especie.insertAdjacentHTML("afterbegin", `<span>Espécie: </span>${pet.species}`);
 
     if (pet.available_for_adoption) {
-        adotavel.innerText = 'Adotável: Sim'
+        adotavel.insertAdjacentHTML("afterbegin", `<span>Adotável: </span>Sim`)
     } else {
-        adotavel.innerText = 'Adotável: Não'
+        adotavel.insertAdjacentHTML("afterbegin", `<span>Adotável: </span>Não`)
     }
 
     checkImagem(pet, fotoPet)
