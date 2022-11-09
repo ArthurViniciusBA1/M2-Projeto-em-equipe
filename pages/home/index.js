@@ -1,11 +1,11 @@
 import { adotaPet, meuPerfil, todosPets } from "../../scripts/request.js";
 
 const token = localStorage.getItem("token");
-const botaoDrop = document.querySelector(".buttonDropdown");
+const botaoDrop = document.querySelector(".botaoDropdown");
 const navegacao = document.querySelector("nav");
 
 botaoDrop.addEventListener("click", () => {
-  navegacao.classList.toggle("noShow");
+  navegacao.classList.toggle("naoAparecer");
 });
 
 async function renderizaCardsPets() {
