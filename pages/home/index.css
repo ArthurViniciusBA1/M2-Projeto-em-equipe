@@ -8,6 +8,7 @@ body {
 header {
     border-bottom: 1px solid var(--bg-modal);
     margin-bottom: 1vh;
+    height: 9vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -24,13 +25,15 @@ nav {
     padding: 1vh;
     border-bottom: 1px solid var(--brand-1);
     position: absolute;
-    top: 5vh;
+    top: 9vh;
     gap: 10vw;
     width: 100%;
     justify-content: center;
     display: flex;
     z-index: 1;
 }
+
+
 
 main {
     width: 90%;
