@@ -7,6 +7,15 @@ const navegacao = document.querySelector("nav");
 
 botaoDrop.addEventListener("click", () => {
   navegacao.classList.toggle("naoAparecer");
+  botaoDrop.classList.toggle('fecharMenu')
+
+  if(botaoDrop.classList.contains('fecharMenu')){
+    botaoDrop.innerHTML = ''
+    botaoDrop.classList.add('fecharMenu')
+  }else{
+    botaoDrop.innerHTML = ''
+    botaoDrop.innerText = '='
+  }
 });
 
 async function renderizaCardsPets() {
