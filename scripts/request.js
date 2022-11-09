@@ -33,11 +33,17 @@ export async function login(usuario) {
     });
 
     let loginJson = await login.json();
-    localStorage.setItem("token", JSON.stringify(loginJson.token));
+    if (loginJson.token) {
+      localStorage.setItem("token", JSON.stringify(loginJson.token));
 
-    window.location.replace("../pages/home/index.html");
+      window.location.replace("../pages/home/index.html");
 
-    return loginJson;
+      return loginJson;
+      
+    } else {
+      return loginJson.message
+    }
+
   } catch (err) {
     console.log(err);
   }
