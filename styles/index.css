@@ -9,6 +9,7 @@ body {
 
 header {
     width: 100%;
+  
     background: var(--brand-1);
 }
 
@@ -17,7 +18,7 @@ main {
 }
 
 .imagemLogo {
-    padding: 4%;
+    padding: 1.5%;
     margin: 10px 0;
 }
 
@@ -25,7 +26,7 @@ main {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-
+    opacity: 0.5;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -59,6 +60,7 @@ main {
     gap: 20px;
     position: relative;
     align-items: center;
+    height: 100vh;
 }
 form>input, form>button {
     height: 40px;
@@ -93,7 +95,6 @@ form>button:active {
     width: 70%;
     height: 40px;
     border-radius: 30px;
-    border: none;
     font-size: 1rem;
 }
 
@@ -113,5 +114,7 @@ footer {
     form>input {
         max-width: 300px;
         width: 300px;
+        
     }
+    
 }
