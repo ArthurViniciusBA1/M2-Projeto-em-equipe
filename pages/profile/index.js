@@ -19,6 +19,15 @@ const botoes = document.querySelector("header div");
 
 botaoDrop.addEventListener("click", () => {
     botoes.classList.toggle("naoAparecer");
+    botaoDrop.classList.toggle('fecharMenu')
+
+    if(botaoDrop.classList.contains('fecharMenu')){
+      botaoDrop.innerHTML = ''
+      botaoDrop.classList.add('fecharMenu')
+    }else{
+      botaoDrop.innerHTML = ''
+      botaoDrop.innerText = '='
+    }
 });
 
 
