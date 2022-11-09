@@ -66,7 +66,8 @@ form>input, form>button {
     border-radius: 30px;
     border: none;
     font-size: 1rem;
-    width: 65%;
+    max-width: 300px;
+    width: 68%;
 }
 form>input {
     padding-left: 20px;
@@ -104,4 +105,14 @@ footer {
     height: 25px;
     width: 100%;
     background-color: var(--brand-1);
+}
+
+@media (min-width: 769px) {
+    .imagemLogo {
+        padding: 1.5%;
+    }
+    form>input {
+        max-width: 300px;
+        width: 300px;
+    }
 }
