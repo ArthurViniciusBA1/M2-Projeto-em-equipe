@@ -8,23 +8,23 @@
 
 
 :root {
-    --brand-1: #962027;
+    --brand-1: #006270;
     --brand-2: #b94149;
     --brand-3: #CC5833;
-    --brand-opaca: #96202733;
+    --brand-opaca: #00627033;
 
     --contrast: #B48CF2;
 
     --bg-modal: #878f9777;
-    --modal: #fff;
+    --modal: #D8D8D7;
 
 
     --black: #000000;
-    --white-1: #D8D8D7;
+    --white-1: #fff;
     --white-2: #FFF8E7;
     --grey-1: #cfcfcf;
     --grey-2: #ececec;
-    
+
     --alert-success: #5bdb77;
 
     --font-1: 2rem;
@@ -40,7 +40,7 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-.container{
+.container {
     width: 90%;
     max-width: 1400px;
     margin: 0 auto;
