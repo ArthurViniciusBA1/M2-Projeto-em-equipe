@@ -1,5 +1,6 @@
 import { recebeLocalStorage } from "./localStorage.js";
 import { fecharModal } from "./modal.js";
+import { toast } from "./toast.js";
 
 let urlBase = "https://m2-api-adot-pet.herokuapp.com";
 let headers = {
