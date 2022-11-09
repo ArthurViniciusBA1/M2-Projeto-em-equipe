@@ -12,6 +12,13 @@ import { deletarPet, meuPerfil, meusPetParaAdocao, meusPets } from "../../script
 const token = JSON.parse(localStorage.getItem("token"));
 const dadosPessoais = document.querySelector(".dados");
 const imagemPerfil = document.querySelector(".cabecalho img");
+const botaoDrop = document.querySelector(".botaoDropdown");
+const botoes = document.querySelector("header div");
+
+botaoDrop.addEventListener("click", () => {
+    botoes.classList.toggle("naoAparecer");
+});
+
 
 async function criarPerfil() {
     let perfil = await meuPerfil(token);
