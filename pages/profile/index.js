@@ -22,6 +22,15 @@ if (!token) {
 
 botaoDrop.addEventListener("click", () => {
     botoes.classList.toggle("naoAparecer");
+    botaoDrop.classList.toggle('fecharMenu')
+
+    if(botaoDrop.classList.contains('fecharMenu')){
+      botaoDrop.innerHTML = ''
+      botaoDrop.classList.add('fecharMenu')
+    }else{
+      botaoDrop.innerHTML = ''
+      botaoDrop.innerText = '='
+    }
 });
 
 
@@ -115,7 +124,7 @@ function criaCardPetProfile(pet) {
     if (pet.available_for_adoption) {
         adotavel.insertAdjacentHTML("afterbegin", `<span>Adotável: </span>Sim`)
     } else {
-        adotavel.insertAdjacentHTML("afterbegin", `<span>Adotável: </span>Não`)
+        adotavel.insertAdjacentHTML("afterbegin", `<span>Pet adotado</span>`)
     }
 
     checkImagem(pet, fotoPet)
@@ -141,13 +150,16 @@ function criaCardPetProfile(pet) {
     return card
 }
 
+
 async function renderizaCardPetProfile() {
     const ul = document.querySelector('.listaDePets')
 
-    let arrPet = await filtrarPetsCriados()
+    let localS = JSON.parse(localStorage.getItem('token'))
+
+    let allmypet = await meusPets(localS)
    
-    if (arrPet.length !== 0) {
-        arrPet.forEach(element => {
+    if (allmypet.length !== 0) {
+        allmypet.forEach(element => {
             ul.append(criaCardPetProfile(element))
         })
     }
