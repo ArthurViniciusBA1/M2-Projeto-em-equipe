@@ -5,6 +5,7 @@
 @import url(./modal.css);
 @import url(./input.css);
 @import url(./margins.css);
+@import url(./toasts.css);
 
 
 :root {
@@ -24,6 +25,7 @@
     --white-2: #FFF8E7;
     --grey-1: #cfcfcf;
     --grey-2: #ececec;
+    --grey-1-70: #64646470;
 
     --alert-success: #5bdb77;
 
