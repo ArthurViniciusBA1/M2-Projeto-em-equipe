@@ -43,12 +43,6 @@ header div {
     display: none;
 }
 
-.container{
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
 .botoes{
     display: flex;
     flex-direction: column;
@@ -157,7 +151,7 @@ section {
     display: flex;
     gap: 30px;
     flex-direction: column;
-    background-color: var( --modal);
+    background-color: var(--modal);
     flex-wrap: wrap;
     align-items: center;
     margin: 30px 0;
