@@ -6,9 +6,10 @@ button {
     outline: none;
     font-weight: 600;
     font-size: 1rem;
-    border-radius: 30px;
+    border-radius: 8px;
     padding: 4px 16px;
     cursor: pointer;
+    max-width: 300px;
 }
 
 .buttonBrand1 {
@@ -34,15 +35,10 @@ button {
     color: var(--white-1);
 }
 
-.buttonDropdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.botaoDropdown {
     height: 5vh;
     background-color: var(--white-2);
     border-radius: 30px;
-    font-weight: 600;
-    font-size: 1rem;
     color: var(--brand-1);
     border: none;
 }
@@ -76,9 +72,19 @@ button {
     border: 1px solid var(--white-1);
 }
 
-@media (min-width: 800px) {
+#cadastrarNovoPet{
+    width: 100%;
+    padding: 10px;
+}
+
+
+@media (min-width: 769px) {
     .botaoAdocao {
-        max-width: 50%;
+        max-width: 90%;
         padding: 0.8vh 2vw;
+    }
+
+    .botaoDropdown {
+        display: none;
     }
 }

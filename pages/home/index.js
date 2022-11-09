@@ -1,18 +1,28 @@
+import { checkImagem} from "../../scripts/checaImagem.js";
 import { adotaPet, meuPerfil, todosPets } from "../../scripts/request.js";
 
 const token = localStorage.getItem("token");
-const botaoDrop = document.querySelector(".buttonDropdown");
+const botaoDrop = document.querySelector(".botaoDropdown");
 const navegacao = document.querySelector("nav");
 
 botaoDrop.addEventListener("click", () => {
-  navegacao.classList.toggle("noShow");
+  navegacao.classList.toggle("naoAparecer");
 });
 
 async function renderizaCardsPets() {
   const listaPetsHtml = document.querySelector(".listaPets");
   const listaPets = await todosPets();
   const infoUsuario = await meuPerfil(JSON.parse(token));
-  listaPets.forEach((pet) => criaCard(pet, infoUsuario.id, listaPetsHtml));
+  
+  listaPets.forEach((pet) => {
+    if (pet.available_for_adoption) {
+      criaCard(pet, infoUsuario.id, listaPetsHtml)
+    } else {
+      if (pet.guardian.id == infoUsuario.id) {
+        criaCard(pet, infoUsuario.id, listaPetsHtml)
+      }
+    }
+  });
 }
 
 function criaCard(pet, idUsuario, listaHtml) {
@@ -38,8 +48,7 @@ function criaCard(pet, idUsuario, listaHtml) {
   nome.innerText = pet.name;
   especie.innerText = pet.species;
 
-  fotoPet.src = pet.avatar_url;
-  fotoPet.alt = `Foto do ${pet.name} (${pet.species})`;
+  checkImagem(pet, fotoPet)
 
   if (pet.available_for_adoption) {
     botaoAdotar.innerText = "Me adota?";
@@ -49,12 +58,8 @@ function criaCard(pet, idUsuario, listaHtml) {
     });
   } else {
     if (pet.guardian.id == idUsuario) {
-      botaoAdotar.innerText = "Você já adotou\neste pet";
+      botaoAdotar.innerText = "Já adotou";
       botaoAdotar.classList = "botaoAdocao adotado";
-      botaoAdotar.setAttribute("disabled", true);
-    } else {
-      botaoAdotar.innerText = "Indisponível";
-      botaoAdotar.classList = "botaoAdocao indisponivel";
       botaoAdotar.setAttribute("disabled", true);
     }
   }
@@ -66,7 +71,7 @@ function criaCard(pet, idUsuario, listaHtml) {
   listaHtml.append(card);
 }
 
-function botaoLogoutEvent() {
+export function botaoLogoutEvent() {
   const botaoLogout = document.querySelector("#logout");
 
   botaoLogout.addEventListener("click", () => {

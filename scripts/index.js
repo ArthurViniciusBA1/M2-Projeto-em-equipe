@@ -8,7 +8,7 @@ const botaoCadastrar  = document.querySelector(".cadastrar")
 formularioLogin.addEventListener("submit", (event) =>{
     event.preventDefault()
     let corpo = receberForm(formularioLogin.elements)
-    login(corpo)
+    let mensagem = login(corpo)
 })
 
 botaoCadastrar.addEventListener("click", () => {

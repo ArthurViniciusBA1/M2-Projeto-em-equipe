@@ -1,6 +1,7 @@
 .inputPadrao{
-    height: 40px;
+    display: flex;
     padding: 0 10px;
+    height: 40px;
     border-radius: 30px;
     border: 1px solid var(--bg-modal);
 }
