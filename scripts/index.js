@@ -1,10 +1,15 @@
-import { receberForm } from "./inputs.js"
+import { recebeLocalStorage } from "./localStorage.js"
 import { abrirModal, modalCadastrar } from "./modal.js"
 import { gerarCaminhoAleatorio } from "./randomPets.js"
 import { login, meusPets } from "./request.js"
 
 const formularioLogin = document.querySelector(".formLogin")
 const botaoCadastrar  = document.querySelector(".cadastrar")
+let token = recebeLocalStorage()
+
+if (token) {
+    window.location.href = "../pages/home"
+}
 
 function fundoAleatorio(){
     let div = document.querySelector(".divImagem")
