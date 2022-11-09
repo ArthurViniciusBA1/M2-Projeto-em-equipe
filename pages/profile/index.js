@@ -8,6 +8,7 @@ import {
     modalDeletarPet,
 } from "../../scripts/modal.js";
 import { meuPerfil, meusPetParaAdocao, meusPets } from "../../scripts/request.js";
+import { toast } from "../../scripts/toast.js";
 
 
 const token = JSON.parse(localStorage.getItem("token"));
@@ -194,8 +195,6 @@ async function filtrarPetsCriados() {
 
     return todosPetParaAdotar
 }
-
-
 
 filtrarPetsCriados()
 botaoHomeEvent();
