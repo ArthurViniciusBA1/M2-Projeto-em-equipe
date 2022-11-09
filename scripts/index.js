@@ -1,3 +1,4 @@
+import { receberForm } from "./inputs.js"
 import { recebeLocalStorage } from "./localStorage.js"
 import { abrirModal, modalCadastrar } from "./modal.js"
 import { gerarCaminhoAleatorio } from "./randomPets.js"
