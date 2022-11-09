@@ -1,5 +1,5 @@
 function numeroAleatorio() {
-    return Math.floor(Math.random() * (7 - 1) + 1)
+    return Math.floor(Math.random() * (7 - 2) + 2)
 }
 
 function gerarCaminhoAleatorio(){
