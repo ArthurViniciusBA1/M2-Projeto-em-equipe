@@ -56,7 +56,7 @@ main {
     min-width: 235px;
     max-width: 235px;
     min-height:320px ;
-    background-color: var(--white-2);
+    background-color: var(--white-1);
     box-shadow: 0px 0px 18px -5px var(--brand-1);
     position: relative;
 }
@@ -93,7 +93,7 @@ main {
 }
 
 .especiePet {
-    color: var(--grey-1);
+    color: var(--black);
     font-weight: 600;
     font-size: var(--font-3);
     margin-top: 10px;
@@ -119,7 +119,7 @@ footer p {
 @media (min-width: 769px) {
     header {
         height: 9vh;
-        padding: 1vh 0;
+        padding: 1vh 5vw;
     }
 
     header img {
@@ -166,26 +166,33 @@ footer p {
         gap: 10px;
     }
 
+    .nomePet{
+        color: var(--alert-success);
+    }
+
     .botaoAdocao{
         margin: 10px;
     }
+
     .cardPet {
         border-radius: 8px;
         display: flex;
         flex-direction: column;
         min-width: 280px;
         max-width: 280px;
-        background-color: var(--white-2);
+        background-color: var(--white-1);
         box-shadow: 0px 0px 18px -5px var(--brand-1);
     }
 
     .fotoPet {
         border-radius: 8px 8px 0 0;
+        background-color: rgb(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue);
+        height: 235px;
     }
 
     .fotoPet img {
         width: 100%;
-        height: 235px;
+        max-height: 235px;
         border-radius: 8px 8px 0 0;
         object-fit: cover;
         object-position: center;
