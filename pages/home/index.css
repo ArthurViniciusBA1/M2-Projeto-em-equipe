@@ -118,10 +118,6 @@ footer p {
     color: var(--brand-1);
 }
 
-#logout {
-    border: 2px solid var(--red);
-    color: var(--red);
-}
 
 @media (min-width: 769px) {
     header {
