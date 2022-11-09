@@ -1,4 +1,4 @@
-import { is_img } from "../../scripts/checaImagem.js";
+import { checkImagem} from "../../scripts/checaImagem.js";
 import { adotaPet, meuPerfil, todosPets } from "../../scripts/request.js";
 
 const token = localStorage.getItem("token");
@@ -48,7 +48,7 @@ function criaCard(pet, idUsuario, listaHtml) {
   nome.innerText = pet.name;
   especie.innerText = pet.species;
 
-  is_img(pet, fotoPet)
+  checkImagem(pet, fotoPet)
 
   if (pet.available_for_adoption) {
     botaoAdotar.innerText = "Me adota?";

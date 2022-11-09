@@ -1,5 +1,5 @@
-export function is_img(pet, tag) {
-  var img = new Image();
+export function checkImagem(pet, tag) {
+  let img = new Image();
   img.src = pet.avatar_url;
   img.onload = function () {
     tag.src = pet.avatar_url;
