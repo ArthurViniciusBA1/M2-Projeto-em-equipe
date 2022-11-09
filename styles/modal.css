@@ -17,6 +17,7 @@
     align-items: center;
     width: 90%;
     margin: 20px 0;
+    gap: 10px;
 }
 
 .modalAtualizar input{
@@ -73,7 +74,7 @@
 }
 
 .bgModal button {
-    color: var(--modal);
+    color: var(--white-1);
     min-width: 300px;
     max-width: 343px;
 }
@@ -92,8 +93,9 @@
 }
 
 #btnDeletar{
-    background-color: var(--white);
-    color: var(--brand-1);
+    background-color: var(--white-1);
+    border: 2px solid var(--red);
+    color: var(--red);
 }
 
 .bgModal h2{
