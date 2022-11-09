@@ -83,7 +83,7 @@ export const modalAtualizarPet = ({name, bread, species, avatar_url, id}) => {
     `
     <h2>Atualizar pet</h2>
       <label for="nome">Nome</label>
-        <input type="avatar" value=${name} name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
+        <input type="avatar" value="${name}" name="nome" id="name" placeholder="Nome" class="inputPadrao" required>
       <label for="bread">Raça</label>
         <input type="text" value=${bread} name="bread" id="bread" placeholder="Raça" class="inputPadrao" required>
       <label for="especie">Espécie</label>
