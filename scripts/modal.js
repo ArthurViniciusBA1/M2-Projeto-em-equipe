@@ -129,7 +129,6 @@ export const modalCadastrarPet = () => {
   formModal.addEventListener("submit", (event) => {
     event.preventDefault();
     let corpo = receberForm(formModal.elements);
-    console.log(corpo)
     cadastrarPet(corpo);
   });
 
