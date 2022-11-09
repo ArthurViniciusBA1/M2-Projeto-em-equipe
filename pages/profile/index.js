@@ -1,3 +1,4 @@
+import { checkImagem } from "../../scripts/checaImagem.js";
 import {
     abrirModal,
     modalAtualizarPerfil,
@@ -113,6 +114,8 @@ function criaCardPetProfile(pet) {
     } else {
         adotavel.innerText = 'Adotável: Não'
     }
+
+    checkImagem(pet, figure)
 
     fotoPet.src = pet.avatar_url;
     fotoPet.alt = `Foto do ${pet.name} (${pet.species})`;
