@@ -182,6 +182,7 @@ section {
 }
 
 .corpoCard #btnAtualizar {
+    margin-top: 10px;
     background-color: var(--brand-1);
     color: var(--white-1);
     border: var(--brand-1) 2px solid;
