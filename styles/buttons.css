@@ -12,24 +12,24 @@ button {
     max-width: 300px;
 }
 
-.buttonBrand1 {
+.botaoBrand1 {
     background-color: var(--brand-1);
     color: var(--white-2);
     border: var(--brand-1) 2px solid;
 }
 
-.buttonBrand1:hover {
+.botaoBrand1:hover {
     background-color: var(--white-2);
     color: var(--brand-1);
 }
 
-.buttonBrand2 {
+.botaoBrand2 {
     background-color: var(--white-2);
     border: 2px solid var(--brand-3);
     color: var(--brand-3);
 }
 
-.buttonBrand2:hover {
+.botaoBrand2:hover {
     background-color: var(--brand-2);
     border-color: var(--brand-2);
     color: var(--white-1);
