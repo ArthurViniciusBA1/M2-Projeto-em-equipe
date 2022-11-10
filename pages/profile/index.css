@@ -218,6 +218,10 @@ section {
     font-weight: bold;
 }
 
+.corpoCard h3 {
+    text-transform: capitalize;
+}
+
 @media (min-width: 769px) {
     .dadosPessoais>.botoes {
         flex-direction: row;
